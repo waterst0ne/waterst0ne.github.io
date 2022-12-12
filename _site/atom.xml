@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Ephesus - Minimalist Jekyll Theme</title>
- <link href="waterst0ne.github.io/atom.xml" rel="self"/>
- <link href="waterst0ne.github.io/"/>
- <updated>2022-12-12T06:05:44+03:00</updated>
- <id>waterst0ne.github.io</id>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2022-12-12T06:27:40+03:00</updated>
+ <id>http://localhost:4000</id>
  <author>
    <name>waterStone</name>
    <email></email>
@@ -13,10 +13,32 @@
 
  
  <entry>
+   <title>New Blog</title>
+   <link href="http://localhost:4000/Jack/"/>
+   <updated>2022-12-09T03:00:00+03:00</updated>
+   <id>http://localhost:4000/Newblog</id>
+   <content type="html">&lt;h1 id=&quot;testing-new-blog&quot;&gt;Testing new blog&lt;/h1&gt;
+
+&lt;p&gt;Seems to be working now strange&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Why no working</title>
+   <link href="http://localhost:4000/Jack/"/>
+   <updated>2022-09-23T03:00:00+03:00</updated>
+   <id>http://localhost:4000/Ephesus</id>
+   <content type="html">&lt;h3 id=&quot;testing-new-blog&quot;&gt;Testing new blog&lt;/h3&gt;
+
+&lt;p&gt;What the  heck&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Ephesus Jekyll Blog Theme</title>
-   <link href="waterst0ne.github.io/ephesus-jekyll-blog-theme/"/>
+   <link href="http://localhost:4000/ephesus-jekyll-blog-theme/"/>
    <updated>2021-09-22T03:00:00+03:00</updated>
-   <id>waterst0ne.github.io/Ephesus-Jekyll-Blog-Theme</id>
+   <id>http://localhost:4000/Ephesus-Jekyll-Blog-Theme</id>
    <content type="html">&lt;p&gt;Lorem markdownum nimiumque inutile ulterius tum fluctus arbore aethere in
 laqueosque lorisque tabuerit. Timor pectoraque vetus conspiceris donis arbitrium
 fecerat &lt;em&gt;ait dulci&lt;/em&gt; et reus vultumque ubi &lt;a href=&quot;http://una.net&quot;&gt;mittere&lt;/a&gt; cernunt

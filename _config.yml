@@ -6,7 +6,7 @@ description: >-
   Ephesus - Minimalist Jekyll Theme
 lang: en-US
 timezone:  Europe/Istanbul
-repo: https://github.com/waterst0ne.waterst0ne.github.io # site repo [optional]
+repo: # site repo [optional]https://github.com/waterst0ne.waterst0ne.github.io 
 google_verify:      XXX # Put your Google Verification here
 google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
 discus-identifier:  XXX
