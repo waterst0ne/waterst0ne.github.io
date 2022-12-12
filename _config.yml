@@ -1,12 +1,12 @@
 # Site settings
-site: Ephesus
-title: Ephesus - Minimalist Jekyll Theme
-keywords: ephesus, blog
+site: waterStone
+title: waterStone blog
+keywords: Bitcoin, blog, programming
 description: >-
-  Ephesus - Minimalist Jekyll Theme
+  waterStone blog
 lang: en-US
 timezone:  Europe/Istanbul
-repo: # site repo [optional]https://github.com/waterst0ne.waterst0ne.github.io 
+repo: # site repo [optional]https://github.com/waterst0ne.waterst0ne.github.io // not needed afterall
 google_verify:      XXX # Put your Google Verification here
 google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
 discus-identifier:  XXX
@@ -14,7 +14,7 @@ discus-identifier:  XXX
 # Author settings
 author:
   name: waterStone
-  bio: Computer Engineer @parallelogos <br> Contributor @BitcoinDevKit <br> Open Source /#linux
+  bio: Computer Science @parallelogos <br> Bitcoin Contributor @BitcoinDevKit <br> Open Source /#linux
   picture: assets/images/profile.jpg 
   github: waterst0ne # github username
   twitter: parallelogos # twitter username
@@ -25,7 +25,7 @@ author:
 
 
 # URL settings
-url:  # Domain Name of host. [username].github.io for github pages
+url:  # Domain Name of host. [username].github.io for github pages // doesn't need it after all
 permalink: pretty
 
 markdown: kramdown
