@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/ephesus-jekyll-blog-theme/</loc>
-<lastmod>2021-09-22T03:00:00+03:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/Jack/</loc>
-<lastmod>2022-09-23T03:00:00+03:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/Jack/</loc>
+<loc>http://localhost:4000/bdk-cli-basics/</loc>
 <lastmod>2022-12-09T03:00:00+03:00</lastmod>
 </url>
 <url>

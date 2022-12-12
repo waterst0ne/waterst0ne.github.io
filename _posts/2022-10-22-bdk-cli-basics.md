@@ -1,15 +1,15 @@
 ---
-title: "bdk-cli-basics00"
+title: "Bitcoin Dev Kit bdk-cli-basics00"
 date: 2022-12-09T00:00:00+00:00
-author: Hakan Torun
+author: Peter
 layout: post
-permalink: /Newblog/
-categories: Genel
-tags: [ephesus, jekyll]
+permalink: /bdk-cli-basics/
+categories: bdk
+tags: [bdk, bdk-cli,tutorial]
 ---
 
-
-## Tutorial Goals
+## How to use bdk-cli basics
+### Tutorial Goals
 
 - My goal for this tutorial is to introduce you to [bdk-cli](https://github.com/bitcoindevkit/bdk-cli), a powerful command-line program used for Bitcoin wallet testing. You will be exposed to many of the basic techincal skills that go into creating and managing Bitcoin wallets. 
 - If you've read most of the ["Mastering Bitcoin"](https://github.com/bitcoinbook/bitcoinbook) book, this tutorial could serve as a stepping stone into your Bitcoin wallet development journey.
@@ -23,8 +23,8 @@ tags: [ephesus, jekyll]
 ## A few things before you begin:
 
 - Three things to look out for in each step of the tutorial:
-    - 1) :arrow_forward: - Commands for the Terminal or Shell
-    - 2) :+1: - Preview of the command output. Note, not all commands will output code. 
+    - 1) Commands for the Terminal or Shell start with the `$` symbol
+    - 2) Preview of the command output. Note, not all commands will output code. 
     - 3) Preview Video of the tutorial for reference of what things should look like in action. 
 
 ***    
@@ -46,30 +46,28 @@ tags: [ephesus, jekyll]
 -  If on **Windows** instructions will slightly differ.
 
 ***
-### Rust and Cargo installation:
--   [Rust and Cargo Installation](https://rustup.rs/) 
+### Rust and Cargo installation:```
+```
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 ***
 ### `bdk-cli` installation:
--  Download the [`bdk-cli` github repository locally](https://github.com/bitcoindevkit/bdk-cli.git)
-    -  Enter the folder `cd bdk-cli`
-    -  Install `cargo install --path . --features electrum,repl,compiler `
-    -  Once installation is done exit and reopen your terminal (command-line interface)
 
-### Emoji Legend:
+```
+$ cargo install --version 0.6.0 bdk-cli
+```
 
-:arrow_forward: : Commands to copied and pasted
-
-:+1: : Output/ preview of code
-
-***
 ## Step 0: Check Version of bdk-cli
 
-:arrow_forward:  `bdk-cli -V`
+
+$ `bdk-cli -V`
 
 
-:+1: The output below confirms the command was successful.
+
 ```
+# command output preview
+
 bdk-cli 0.5.0
 ```
 
@@ -78,13 +76,10 @@ bdk-cli 0.5.0
 
 ### Preview of bdk-cli help menu
 
-:arrow_forward:  `bdk-cli --help`
-
-
-:+1: The output below confirms the command was successful.
+$`bdk-cli --help`
 
 ```
-
+# command output preview
 
 USAGE:
     bdk-cli [OPTIONS] <SUBCOMMAND>
@@ -120,7 +115,7 @@ SUBCOMMANDS:
 
 ### 1a: Mnemonic word-list + XPRV (Exteneded Private Key) :key: 
 
-:arrow_forward:   `bdk-cli key generate | tee key.json`
+  $ `bdk-cli key generate | tee key.json`
 
     
 ```
@@ -138,27 +133,27 @@ SUBCOMMANDS:
 
 ***
 ### 1b: Save XPRV (Extended Private Key) into environment variable
-:arrow_forward:   `export XPRV_00=$(cat key.json | jq -r .xprv)`
+$ `export XPRV_00=$(cat key.json | jq -r .xprv)`
 
 ![](https://i.imgur.com/KYW2Cdo.gif)
 
 ***
 ### 1c: Verify environment variable XPRV_00 is active
-:arrow_forward:   `env | grep XPRV`
+$ `env | grep XPRV`
 
 ![](https://i.imgur.com/ZahbJwe.gif)
 
 ***
 ### 1d: Create Descriptor and Save into environment variable
 
-:arrow_forward:   `export my_descriptor="wpkh($XPRV_00/84h/1h/0h/0/*)"`
+ $ `export my_descriptor="wpkh($XPRV_00/84h/1h/0h/0/*)"`
 
 ![](https://i.imgur.com/UV4Vgsq.gif)
 
 ***
 ### 1e: Verify environment variable my_descriptor is active
 
-:arrow_forward: `env | grep my_descriptor`
+$ `env | grep my_descriptor`
 
 ![](https://i.imgur.com/s7ZeRQN.gif)
 
@@ -167,16 +162,18 @@ SUBCOMMANDS:
 ***
 ## Step 2: Generate Receive-Address
 
-:arrow_forward:  `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor get_new_address` 
+$ `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor get_new_address` 
 
 
 ![](https://i.imgur.com/P8PjTAo.gif)
 
 
 
-:+1: The output below confirms the command was successful.
+
 
 ```
+ The output below confirms the command was successful.
+
 {
   "address": "tb1qrh4sq5va0unqtxyfv8al9lz3sna3988cj59uya"
 }
@@ -186,18 +183,19 @@ SUBCOMMANDS:
 ## Step 3: Send testnet bitcoin to the newly created receive-address 
 
 These Testnet faucets allow you to send funds to your newly created address.
-[Bitcoin Testnet Faucet link:1](https://testnet-faucet.mempool.co)
-[Bitcoin Testnet Faucet link:2](https://bitcoinfaucet.uo1.net)
+- [Bitcoin Testnet Faucet LINK#1](https://testnet-faucet.mempool.co)
+- [Bitcoin Testnet Faucet LINK#2](https://bitcoinfaucet.uo1.net)
 
 ***
 ## Step 4: Sync the wallet
 
-:arrow_forward: ```bdk-cli wallet --wallet wallet_name  --descriptor $my_descriptor sync```
+$ `bdk-cli wallet --wallet wallet_name  --descriptor $my_descriptor sync`
 
 
-:+1: The output below confirms the command was successful.
 
 ```
+The output below confirms the command was successful.
+
 {}
 ```
 
@@ -209,15 +207,17 @@ These Testnet faucets allow you to send funds to your newly created address.
 ## Step 5: Check the balance
 
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name  --descriptor $my_descriptor get_balance `
+$ `bdk-cli wallet --wallet wallet_name  --descriptor $my_descriptor get_balance `
 
-:::tip
-Note: The balance will only show after the transaction has been confirmed in a block at least once.
-:::
+
+> Note: The balance will only show after the transaction has been confirmed in a block at least once.
+
 
     
-:+1: The output below confirms the command was successful:
+ 
 ```
+The output below confirms the command was successful:
+
 {
   "satoshi": 100000
 }
@@ -231,17 +231,16 @@ Note: The balance will only show after the transaction has been confirmed in a b
 ***
 ## Step 6: Create Transaction (PSBT)
 
-:arrow_down: To create a PSBT (partially-signed-bitcoin-transaction) run  the command :arrow_down:
+ To create a PSBT (partially-signed-bitcoin-transaction) run  the command 
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor create_tx --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:50000`
+$ `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor create_tx --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:50000`
 
 ![](https://i.imgur.com/EUCovcJ.gif)
 
 
-
-:+1: The output below confirms the command was successful.
-
 ```
+ The output below confirms the command was successful.
+
 {
   "details": {
     "confirmation_time": null,
@@ -255,12 +254,12 @@ Note: The balance will only show after the transaction has been confirmed in a b
 }
 
 ```
- 
-
 
 ***
+
 ### 6a: export PSBT to environment-variable
- :arrow_forward: `export PSBT="PASTE_PSBT_HERE"`
+
+$ `export PSBT="PASTE_PSBT_HERE"`
 
 ![](https://i.imgur.com/CEDKcPZ.gif)
 
@@ -270,13 +269,14 @@ Note: The balance will only show after the transaction has been confirmed in a b
 ***
 ## Step 7: Sign Transaction (PSBT) 
 
-:arrow_forward: ` bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor sign --psbt $PSBT`
-- DON'T FORGET to COPY the PSBT for the next step
+$ `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor sign --psbt $PSBT`
+
+> DON'T FORGET to COPY the PSBT for the next step
 
 ![](https://i.imgur.com/f4o4Ce8.gif)
 
 
-:+1: The output below confirms the command was successful.
+ The output below confirms the command was successful.
 
 
 
@@ -291,7 +291,7 @@ Note: The balance will only show after the transaction has been confirmed in a b
 ***
 ### 7a: export signed psbt to environment variable
 
-:arrow_forward: `export SIGNED_PSBT="Paste_PSBT_HERE"`
+$ `export SIGNED_PSBT="Paste_PSBT_HERE"`
 
 ![](https://i.imgur.com/VJsl8zR.gif)
 
@@ -302,15 +302,15 @@ Note: The balance will only show after the transaction has been confirmed in a b
 ***
 ## Step 8: Broadcast Transaction 
 
-:arrow_forward:  `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor broadcast --psbt $SIGNED_ PSBT`
+ $ `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor broadcast --psbt $SIGNED_ PSBT`
 
 
 ![](https://i.imgur.com/yQZZk0d.gif)
 
  
-:+1: The output below confirms the command was successful.
-
  ```
+The output below confirms the command was successful.
+
 {
   "txid": "a0877b7ce91ea6d141ba63277673f5bdf0edfdd45f91a39ba1a1ace15f839b52"
 }
@@ -322,9 +322,9 @@ Note: The balance will only show after the transaction has been confirmed in a b
 
  - Verify transcation in the memory pool on testnet [Mempool-testnet!](https://mempool.space/testnet)
  
-:::tip
-Finishing touch, run sync one more time and see that the balance has decreased.
-:::
+
+> Finishing touch, run sync one more time and see that the balance has decreased.
+
 
  ***
 ## Resources
@@ -343,5 +343,4 @@ Finishing touch, run sync one more time and see that the balance has decreased.
 - [What are Descriptors and miniscript?](https://blog.summerofbitcoin.org/miniscript-policy-descriptors-hidden-powers-of-bitcoin/)
 - [Master Private  Key and Extended Private Key](https://bitcoin.stackexchange.com/questions/97242/bip39-tool-bip32-extended-private-key-vs-bip32-root-key)
 
-- [Minsc
-A Miniscript-based scripting language for Bitcoin contracts](https://min.sc)
+- [MinscA Miniscript-based scripting language for Bitcoin contracts](https://min.sc)

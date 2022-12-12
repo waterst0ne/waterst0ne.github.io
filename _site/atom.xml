@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Ephesus - Minimalist Jekyll Theme</title>
+ <title>waterStone blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-12-12T06:27:40+03:00</updated>
+ <updated>2022-12-12T07:32:27+03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>waterStone</name>
@@ -13,93 +13,321 @@
 
  
  <entry>
-   <title>New Blog</title>
-   <link href="http://localhost:4000/Jack/"/>
+   <title>Bitcoin Dev Kit bdk-cli-basics00</title>
+   <link href="http://localhost:4000/bdk-cli-basics/"/>
    <updated>2022-12-09T03:00:00+03:00</updated>
-   <id>http://localhost:4000/Newblog</id>
-   <content type="html">&lt;h1 id=&quot;testing-new-blog&quot;&gt;Testing new blog&lt;/h1&gt;
-
-&lt;p&gt;Seems to be working now strange&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Why no working</title>
-   <link href="http://localhost:4000/Jack/"/>
-   <updated>2022-09-23T03:00:00+03:00</updated>
-   <id>http://localhost:4000/Ephesus</id>
-   <content type="html">&lt;h3 id=&quot;testing-new-blog&quot;&gt;Testing new blog&lt;/h3&gt;
-
-&lt;p&gt;What the  heck&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Ephesus Jekyll Blog Theme</title>
-   <link href="http://localhost:4000/ephesus-jekyll-blog-theme/"/>
-   <updated>2021-09-22T03:00:00+03:00</updated>
-   <id>http://localhost:4000/Ephesus-Jekyll-Blog-Theme</id>
-   <content type="html">&lt;p&gt;Lorem markdownum nimiumque inutile ulterius tum fluctus arbore aethere in
-laqueosque lorisque tabuerit. Timor pectoraque vetus conspiceris donis arbitrium
-fecerat &lt;em&gt;ait dulci&lt;/em&gt; et reus vultumque ubi &lt;a href=&quot;http://una.net&quot;&gt;mittere&lt;/a&gt; cernunt
-hosti.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//Function declarations&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;is_prime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;goldbach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-	&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Enter even number:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;scanf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;%d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;goldbach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Incorrect number!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;nec-partus-ferox-veniam-serpentis-servet-viro&quot;&gt;Nec partus ferox veniam serpentis servet viro&lt;/h2&gt;
-
-&lt;p&gt;Sed &lt;strong&gt;premunt turba verum&lt;/strong&gt; circueunt ex inmurmurat confundit area premente
-&lt;a href=&quot;http://spectante-mulcet.com/magna&quot;&gt;unus&lt;/a&gt;, qui resupinus facit adsuetam. Dixit
-sic &lt;em&gt;tandemque vultus aniles&lt;/em&gt; fuerat vulgares removete arva silet, mutabitur
-ramos omnes absens Idan vallibus volucrem. Feremus loquuntur furit &lt;strong&gt;rerum
-pectora violata&lt;/strong&gt;, aevo &lt;a href=&quot;http://laborum.net/modo&quot;&gt;unda condita&lt;/a&gt; non bracchia
-viscera. &lt;em&gt;Candida saepe&lt;/em&gt; rettulit tegumen &lt;strong&gt;abest de si&lt;/strong&gt;, et procul, hoc qui
-liquidarum, totidem pars pavidum filia iam.&lt;/p&gt;
+   <id>http://localhost:4000/bdk-cli-basics</id>
+   <content type="html">&lt;h2 id=&quot;how-to-use-bdk-cli-basics&quot;&gt;How to use bdk-cli basics&lt;/h2&gt;
+&lt;h3 id=&quot;tutorial-goals&quot;&gt;Tutorial Goals&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Aulaea saevam&lt;/li&gt;
-  &lt;li&gt;Animam conquerar&lt;/li&gt;
-  &lt;li&gt;Lycormas fatemur germanam&lt;/li&gt;
+  &lt;li&gt;My goal for this tutorial is to introduce you to &lt;a href=&quot;https://github.com/bitcoindevkit/bdk-cli&quot;&gt;bdk-cli&lt;/a&gt;, a powerful command-line program used for Bitcoin wallet testing. You will be exposed to many of the basic techincal skills that go into creating and managing Bitcoin wallets.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If you’ve read most of the &lt;a href=&quot;https://github.com/bitcoinbook/bitcoinbook&quot;&gt;“Mastering Bitcoin”&lt;/a&gt; book, this tutorial could serve as a stepping stone into your Bitcoin wallet development journey.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;This short tutorial will expose you to the &lt;a href=&quot;https://docs.rs/bdk/latest/bdk/&quot;&gt;bdk library &lt;/a&gt; and the practical knowledge needed for Bitcoin wallet development.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;You can create a custom modular wallet by using the &lt;a href=&quot;https://github.com/bitcoindevkit/bdk-ffi&quot;&gt;Language Bindings&lt;/a&gt; for &lt;strong&gt;Kotlin/Java, Swift, Python&lt;/strong&gt; which enable the use of BDK’s &lt;strong&gt;Rust&lt;/strong&gt; library as an API. You can later use these similar steps to create your own Bitcoin mobile, desktop or even WebApp.
+***&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;fata-huc-cessura-secant&quot;&gt;Fata huc cessura secant&lt;/h2&gt;
+&lt;h2 id=&quot;a-few-things-before-you-begin&quot;&gt;A few things before you begin:&lt;/h2&gt;
 
-&lt;p&gt;Est urbem ferrum gratia altera? In nec profundo valuit vidit, ira o adhuc
-convicia. Quoque simul, nisi ausis equus tum veluti: gener. Lacu abesset pinnas,
-albaque, esto, quem quod.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Three things to look out for in each step of the tutorial:
+    &lt;ul&gt;
+      &lt;li&gt;1) Commands for the Terminal or Shell start with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$&lt;/code&gt; symbol&lt;/li&gt;
+      &lt;li&gt;2) Preview of the command output. Note, not all commands will output code.&lt;/li&gt;
+      &lt;li&gt;3) Preview Video of the tutorial for reference of what things should look like in action.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Deceant tormenta nomine&lt;/li&gt;
-  &lt;li&gt;Furti visi honorati Dardanio profundo genus superos&lt;/li&gt;
-  &lt;li&gt;Cum cadi fundit accensus silentibus ipsa ambiguum&lt;/li&gt;
-  &lt;li&gt;Cogis data sparsosque falleret nepos de sedem&lt;/li&gt;
-  &lt;li&gt;Ingeminat falcato somno iratus fac paterna&lt;/li&gt;
-&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;outline-of-tutorial-and-installation-notes&quot;&gt;Outline of Tutorial and Installation notes:&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Sua communiter&lt;/strong&gt; hoc exire iurares usus, &lt;em&gt;percusso iunonis tibi&lt;/em&gt;? Ubi magna
-crinem adsueta ancipitesque sitim; et genus ferumque? Quod &lt;strong&gt;lupos tutus&lt;/strong&gt;, cum
-insania &lt;a href=&quot;http://sparserat.org/cinyras&quot;&gt;tanta Cephalum&lt;/a&gt; harundine eligit
-genitoris ad concutit.&lt;/p&gt;
+&lt;h3 id=&quot;brief-outline-of-tutorial&quot;&gt;Brief Outline of Tutorial&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Step 1: Creating a mnemonic word list + XPRV (Extended Private Key)&lt;/li&gt;
+  &lt;li&gt;Step 2: Generate testnet Receive Address&lt;/li&gt;
+  &lt;li&gt;Step 3: Send funds to newly generated address&lt;/li&gt;
+  &lt;li&gt;Step 4: Sync Wallet&lt;/li&gt;
+  &lt;li&gt;Step 5: Check Balance of Wallet&lt;/li&gt;
+  &lt;li&gt;Step 6: Create a Transaction (PSBT)&lt;/li&gt;
+  &lt;li&gt;Step 7: Sign the Transaction (PSBT)&lt;/li&gt;
+  &lt;li&gt;Step 8: Broadcast Transaction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;to-follow-this-tutorial-you-will-need&quot;&gt;To follow this tutorial you will need:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Linux&lt;/strong&gt; or &lt;strong&gt;macOS&lt;/strong&gt; device.&lt;/li&gt;
+  &lt;li&gt;If on &lt;strong&gt;Windows&lt;/strong&gt; instructions will slightly differ.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;rust-and-cargo-installation&quot;&gt;Rust and Cargo installation:```&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl --proto &apos;=https&apos; --tlsv1.2 -sSf https://sh.rustup.rs | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;bdk-cli-installation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli&lt;/code&gt; installation:&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cargo install --version 0.6.0 bdk-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;step-0-check-version-of-bdk-cli&quot;&gt;Step 0: Check Version of bdk-cli&lt;/h2&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli -V&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# command output preview
+
+bdk-cli 0.5.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/IcuyeMS.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;preview-of-bdk-cli-help-menu&quot;&gt;Preview of bdk-cli help menu&lt;/h3&gt;
+
+&lt;p&gt;$&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli --help&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# command output preview
+
+USAGE:
+    bdk-cli [OPTIONS] &amp;lt;SUBCOMMAND&amp;gt;
+
+FLAGS:
+    -h, --help       
+            Prints help information
+
+    -V, --version    
+            Prints version information
+
+
+OPTIONS:
+    -d, --datadir &amp;lt;DATADIR&amp;gt;    
+            Sets the wallet data directory. Default value : &quot;~/.bdk-bitcoin
+
+    -n, --network &amp;lt;NETWORK&amp;gt;    
+            Sets the network [default: testnet]  [possible values: bitcoin, testnet, signet, regtest]
+
+
+SUBCOMMANDS:
+    compile    Compile a miniscript policy to an output descriptor
+    help       Prints this message or the help of the given subcommand(s)
+    key        Subcommands for Key operations
+    repl       Options to configure a SOCKS5 proxy for a blockchain client connection
+    wallet     Wallet subcommands that can be issued without a blockchain backend
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;step-1-seed-generate&quot;&gt;Step 1: Seed Generate&lt;/h2&gt;
+
+&lt;h3 id=&quot;1a-mnemonic-word-list--xprv-exteneded-private-key-key&quot;&gt;1a: Mnemonic word-list + XPRV (Exteneded Private Key) :key:&lt;/h3&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli key generate | tee key.json&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;fingerprint&quot;: &quot;42b15d2f&quot;,
+  &quot;mnemonic&quot;: &quot;party salon worth satoshi envelope suggest garlic dry add pitch throw clap keen narrow antique oyster ketchup purchase gasp visual work venue fog crater&quot;,
+  &quot;xprv&quot;: &quot;tprv8ZgxMBicQKsPdwpamtjqMFpYRTafnE1bN2SphLEybCtRKakk6S1TgQCsZgiBwJuJNWe3jYdgVCTsKf9weMxj6tW4zNNKWptykszJpS2L8wE&quot;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ii62Hul.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;1b-save-xprv-extended-private-key-into-environment-variable&quot;&gt;1b: Save XPRV (Extended Private Key) into environment variable&lt;/h3&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_00=$(cat key.json | jq -r .xprv)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/KYW2Cdo.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;1c-verify-environment-variable-xprv_00-is-active&quot;&gt;1c: Verify environment variable XPRV_00 is active&lt;/h3&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPRV&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ZahbJwe.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;1d-create-descriptor-and-save-into-environment-variable&quot;&gt;1d: Create Descriptor and Save into environment variable&lt;/h3&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export my_descriptor=&quot;wpkh($XPRV_00/84h/1h/0h/0/*)&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/UV4Vgsq.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;1e-verify-environment-variable-my_descriptor-is-active&quot;&gt;1e: Verify environment variable my_descriptor is active&lt;/h3&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep my_descriptor&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/s7ZeRQN.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-2-generate-receive-address&quot;&gt;Step 2: Generate Receive-Address&lt;/h2&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor get_new_address&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/P8PjTAo.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; The output below confirms the command was successful.
+
+{
+  &quot;address&quot;: &quot;tb1qrh4sq5va0unqtxyfv8al9lz3sna3988cj59uya&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-3-send-testnet-bitcoin-to-the-newly-created-receive-address&quot;&gt;Step 3: Send testnet bitcoin to the newly created receive-address&lt;/h2&gt;
+
+&lt;p&gt;These Testnet faucets allow you to send funds to your newly created address.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://testnet-faucet.mempool.co&quot;&gt;Bitcoin Testnet Faucet LINK#1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoinfaucet.uo1.net&quot;&gt;Bitcoin Testnet Faucet LINK#2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-4-sync-the-wallet&quot;&gt;Step 4: Sync the wallet&lt;/h2&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name  --descriptor $my_descriptor sync&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The output below confirms the command was successful.
+
+{}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/WFYBgVB.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-5-check-the-balance&quot;&gt;Step 5: Check the balance&lt;/h2&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name  --descriptor $my_descriptor get_balance &lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note: The balance will only show after the transaction has been confirmed in a block at least once.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The output below confirms the command was successful:
+
+{
+  &quot;satoshi&quot;: 100000
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/v8MAYB2.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-6-create-transaction-psbt&quot;&gt;Step 6: Create Transaction (PSBT)&lt;/h2&gt;
+
+&lt;p&gt;To create a PSBT (partially-signed-bitcoin-transaction) run  the command&lt;/p&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor create_tx --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:50000&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/EUCovcJ.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; The output below confirms the command was successful.
+
+{
+  &quot;details&quot;: {
+    &quot;confirmation_time&quot;: null,
+    &quot;fee&quot;: 113,
+    &quot;received&quot;: 0,
+    &quot;sent&quot;: 123000,
+    &quot;transaction&quot;: null,
+    &quot;txid&quot;: &quot;029173d76253e3441f9dc26f91e6ef30dff486848e91a7941f0cacd0af25ee30&quot;
+  },
+  &quot;psbt&quot;: &quot;cHNidP8BAFUBAAAAAak8uMR3UGkAGUKWsq8Mv45qg2fdD93JQRIsa2P0wFloAQAAAAD/////AQfgAQAAAAAAGXapFDRKD0jKFQ7CuQOBdmC5tosTpnAmiKwAAAAAAAEA3gIAAAAAAQFY9sVfEEbyjrHXSlxXDxL+71WOMnsPpVElwk+3E/J9vAAAAAAA/v///wIYZRIAAAAAABYAFBKYf7yF+ss6EFdw2rDZTfdLhep8eOABAAAAAAAWABQd6wBRnX8mBZiJYfvy/FGE+xKc+AJHMEQCIFSIkvEUI9yUgEw4JocRs1aiVsBlKKXrOQaQb3XFqR21AiBqiEVzCVVSRGjckyPDgAQBnOdSzBYR6Rw6KFcCP+E27wEhAwIlXdfM2WYnYa36Hp4MS6YkplBAgBsb1tYG9NiWFWTKzPYhAAEBH3jgAQAAAAAAFgAUHesAUZ1/JgWYiWH78vxRhPsSnPgiBgP80FpaWYQzGzCnNI9blXbei61YpAmtoezMRxpVvBJ6SxgTizKsVAAAgAEAAIAAAACAAAAAAAAAAAAAAA==&quot;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;6a-export-psbt-to-environment-variable&quot;&gt;6a: export PSBT to environment-variable&lt;/h3&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export PSBT=&quot;PASTE_PSBT_HERE&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/CEDKcPZ.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-7-sign-transaction-psbt&quot;&gt;Step 7: Sign Transaction (PSBT)&lt;/h2&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor sign --psbt $PSBT&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;DON’T FORGET to COPY the PSBT for the next step&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/f4o4Ce8.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The output below confirms the command was successful.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;is_finalized&quot;: true,
+  &quot;psbt&quot;: &quot;cHNidP8BAFUBAAAAAak8uMR3UGkAGUKWsq8Mv45qg2fdD93JQRIsa2P0wFloAQAAAAD/////AQfgAQAAAAAAGXapFDRKD0jKFQ7CuQOBdmC5tosTpnAmiKwAAAAAAAEA3gIAAAAAAQFY9sVfEEbyjrHXSlxXDxL+71WOMnsPpVElwk+3E/J9vAAAAAAA/v///wIYZRIAAAAAABYAFBKYf7yF+ss6EFdw2rDZTfdLhep8eOABAAAAAAAWABQd6wBRnX8mBZiJYfvy/FGE+xKc+AJHMEQCIFSIkvEUI9yUgEw4JocRs1aiVsBlKKXrOQaQb3XFqR21AiBqiEVzCVVSRGjckyPDgAQBnOdSzBYR6Rw6KFcCP+E27wEhAwIlXdfM2WYnYa36Hp4MS6YkplBAgBsb1tYG9NiWFWTKzPYhAAEBH3jgAQAAAAAAFgAUHesAUZ1/JgWYiWH78vxRhPsSnPgiAgP80FpaWYQzGzCnNI9blXbei61YpAmtoezMRxpVvBJ6S0gwRQIhALWkBRSJzxuf0od4tPu3qFmEfJ2Y+/QBGtfjSFObWsPeAiA4QJx8Rk5pacrjHv5EOdw6RNHXcdtepFs+m0/Za/h0UQEiBgP80FpaWYQzGzCnNI9blXbei61YpAmtoezMRxpVvBJ6SxgTizKsVAAAgAEAAIAAAACAAAAAAAAAAAABBwABCGwCSDBFAiEAtaQFFInPG5/Sh3i0+7eoWYR8nZj79AEa1+NIU5taw94CIDhAnHxGTmlpyuMe/kQ53DpE0ddx216kWz6bT9lr+HRRASED/NBaWlmEMxswpzSPW5V23outWKQJraHszEcaVbwSeksAAA==&quot;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;7a-export-signed-psbt-to-environment-variable&quot;&gt;7a: export signed psbt to environment variable&lt;/h3&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export SIGNED_PSBT=&quot;Paste_PSBT_HERE&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/VJsl8zR.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-8-broadcast-transaction&quot;&gt;Step 8: Broadcast Transaction&lt;/h2&gt;
+
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor broadcast --psbt $SIGNED_ PSBT&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/yQZZk0d.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The output below confirms the command was successful.
+
+{
+  &quot;txid&quot;: &quot;a0877b7ce91ea6d141ba63277673f5bdf0edfdd45f91a39ba1a1ace15f839b52&quot;
+}
+ 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Verify transcation in the memory pool on testnet &lt;a href=&quot;https://mempool.space/testnet&quot;&gt;Mempool-testnet!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Finishing touch, run sync one more time and see that the balance has decreased.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;h3 id=&quot;other-tutorials--blog&quot;&gt;Other Tutorials / Blog&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/sob-22-experience-bdk/&quot;&gt; My Summer of Bitcoin Experience&lt;/a&gt;
+    &lt;h3 id=&quot;useful-links&quot;&gt;Useful links&lt;/h3&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki&quot;&gt;BIP-32:  Hierarchical Deterministic Wallets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki&quot;&gt;BIP: 39 - Mnemonic code for generating deterministic keys&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki&quot;&gt;BIP: 44 - Multi-Account Hierarchy for Deterministic Wallets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki&quot;&gt;BIP: 84 - Derivation scheme for P2WPKH based accounts&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki&quot;&gt;BIP: 174 - Partially Signed Bitcoin Transaction Format&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/miniscript-policy-descriptors-hidden-powers-of-bitcoin/&quot;&gt;What are Descriptors and miniscript?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://bitcoin.stackexchange.com/questions/97242/bip39-tool-bip32-extended-private-key-vs-bip32-root-key&quot;&gt;Master Private  Key and Extended Private Key&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://min.sc&quot;&gt;MinscA Miniscript-based scripting language for Bitcoin contracts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
