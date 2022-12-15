@@ -37,7 +37,7 @@ When I got home, I did a quick web search on Summer of Bitcoin and noticed the a
 ### Summer of Bitcoin Internship
 A month later, I received a message from BDK for the Summer of Bitcoin internship. I could not believe my eyes; I was accepted to intern and be a part of Summer of Bitcoin `22. I had month before the internship started, I continued learn the tools I needed to be as prepared as possibly for the internship. I continued to work every day and learn more about BDK, this was my chance to learn and contribute. I don't think I ever took a day off; every day is a chance to become better and more efficient. You receive, what you put into anything, you reap what you sow,  ran through my head.  You can read more about my Summer of Bitcoin experience here. 
 -	["My Summer of Bitcoin experience with BDK"](https://blog.summerofbitcoin.org/sob-22-experience-bdk/)
--	https://www.summerofbitcoin.org/bit
+-	[Summer of Bitcoinn](https://www.summerofbitcoin.org/)
 
 ---
 
@@ -52,9 +52,9 @@ Tabconf is the best Bitcoin conference for developers, and aspiring contributors
 ### BitDevs Atlanta and Terminus Electric Money Lab
 Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
 Please make sure to pay them a visit in your  sats-mobile if you happen to be in Atlanta. 
--	Generation Bitcoin 
--	BitDevs ATL
--	Terminus Electric Money Lab
+-	[Generation Bitcoin](https://genbitcoin.org/) 
+-	[BitDevs ATL](https://atlantabitdevs.org/)
+-	[Terminus Electric Money Lab](https://terminus.money/)
 
 ---
 
@@ -72,7 +72,8 @@ Until next time.
 Stay humble and stack Sats! 
 
 
-Bitcoin Open Source Projects and Communities  
+Bitcoin Open Source Projects and Communities 
+ 
 [Bitcoin Dev Kit](https://bitcoindevkit.org/)
 [Lightning Dev Kit](https://lightningdevkit.org/)
 [Bitcoin Design]( https://bitcoin.design/)
