@@ -61,7 +61,7 @@ Please make sure to pay them a visit in your  sats-mobile if you happen to be in
 ---
 
 ### Pacific Bitcoin '22
-This year, I also had the opportunity to attend Pacific Bitcoin '22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the change to  listen to many Bitcoiners perspectives, their ambitions, and their goals. What bear market ? Bitcoiners are still building. 😊  
+This year, I also had the opportunity to attend Pacific Bitcoin '22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the chance to listen to many Bitcoiners perspectives, their ambitions, and their goals. What do you mean a bear market ? Bitcoiners are still building. 😊  
 
 - [Pacific Bitcoin '23](https://www.pacificbitcoin.com/)
 ---
