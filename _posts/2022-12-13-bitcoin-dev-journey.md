@@ -37,7 +37,7 @@ When I got home, I did a quick web search on Summer of Bitcoin and noticed the a
 ### Summer of Bitcoin Internship
 A month later, I received a message from BDK for the Summer of Bitcoin internship. I could not believe my eyes; I was accepted to intern and be a part of Summer of Bitcoin `22. I had month before the internship started, I continued learn the tools I needed to be as prepared as possibly for the internship. I continued to work every day and learn more about BDK, this was my chance to learn and contribute. I don't think I ever took a day off; every day is a chance to become better and more efficient. You receive, what you put into anything, you reap what you sow,  ran through my head.  You can read more about my Summer of Bitcoin experience here. 
 -	["My Summer of Bitcoin experience with BDK"](https://blog.summerofbitcoin.org/sob-22-experience-bdk/)
--	[Summer of Bitcoinn](https://www.summerofbitcoin.org/)
+-	[Summer of Bitcoin](https://www.summerofbitcoin.org/)
 
 ---
 
@@ -48,6 +48,8 @@ After Summer of Bitcoin had finished, I didn’t want to stop contributing to BD
 
 ### TabConf '22
 Tabconf is the best Bitcoin conference for developers, and aspiring contributors, or anyone who wants to get involved in the Bitcoin space. I had zero plans to assist Tabconf `22, but as event was approaching I came across a Bitcoin podcast named "Building Builders". It's hosted by Rod @bitkite with guest speaker Stephen from Bitcoin Design, he happened to be talking about TabConf '22. After listening to the podcast, I was convinced I had to attend TabConf.  The first day of Tabconf was named "Builder day",a day for open-source Bitcoin projects to onboard and demo their projects to individuals that want to learn how to contribute to Bitcoin OSS. On builder day, I had the opportunity to help at the Bitcoin Dev Kit table. I assisted guests with BDK questions and troubleshoot when requested. Day 2 was filled with developer focused workshops. I met so many talented and inspiring Bitcoiners at the conference, being there makes you realize how important Bitcoin is to many individuals around the globe.  Tabconf is a great place to be at if you want to learn more technical details, attend workshops, and network with some of the brightest minds in the Bitcoin space. 
+- [TABCONF `23](https://2023.tabconf.com/)
+
 
 ### BitDevs Atlanta and Terminus Electric Money Lab
 Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
@@ -61,8 +63,7 @@ Please make sure to pay them a visit in your  sats-mobile if you happen to be in
 ### Pacific Bitcoin '22
 This year, I also had the opportunity to attend Pacific Bitcoin '22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the change to  listen to many Bitcoiners perspectives, their ambitions, and their goals. What bear market ? Bitcoiners are still building. 😊  
 
-
-
+- [Pacific Bitcoin '23](https://www.pacificbitcoin.com/)
 ---
 
 ### End of the Year Reflections 
@@ -73,7 +74,7 @@ Stay humble and stack Sats!
 
 
 Bitcoin Open Source Projects and Communities 
- 
+
 [Bitcoin Dev Kit](https://bitcoindevkit.org/)
 [Lightning Dev Kit](https://lightningdevkit.org/)
 [Bitcoin Design]( https://bitcoin.design/)
