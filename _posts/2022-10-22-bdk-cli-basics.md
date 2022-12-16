@@ -1,5 +1,5 @@
 ---
-title: "Bitcoin Dev Kit bdk-cli-basics Single-Signature 00"
+title: "BDK-CLI BASICS: Single-Signature Testnet Transaction (Tutorial)"
 date: 2022-12-14T00:00:00+00:00
 author: Peter
 layout: post

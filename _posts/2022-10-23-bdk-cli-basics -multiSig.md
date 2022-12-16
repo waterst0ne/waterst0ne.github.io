@@ -1,5 +1,5 @@
 ---
-title: "BDK: bdk-cli-basics 2-of-3 Multi-Signature"
+title: "BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial)"
 date: 2022-12-15T00:00:00+00:00
 author: Peter
 layout: post
@@ -19,18 +19,18 @@ tags: [bdk, bdk-cli,tutorial,multi-sig]
 
 > Create three private keys and each in their own environment variable
 
-:arrow_forward: `export XPRV_00=$(bdk-cli key generate | jq -r '.xprv')`
+$ `export XPRV_00=$(bdk-cli key generate | jq -r '.xprv')`
 
-:arrow_forward:   `export XPRV_01=$(bdk-cli key generate | jq -r '.xprv')`
+$   `export XPRV_01=$(bdk-cli key generate | jq -r '.xprv')`
 
-:arrow_forward:   `export XPRV_02=$(bdk-cli key generate | jq -r '.xprv')`
+$   `export XPRV_02=$(bdk-cli key generate | jq -r '.xprv')`
 
 
 ![](https://i.imgur.com/FwgUdwK.gif)
 
 ### 1a: Verify XPRV environment variables are Active
 
-:arrow_forward: `env | grep XPRV`
+$ `env | grep XPRV`
 
 ![](https://i.imgur.com/ZerGPbO.gif)
 
@@ -39,18 +39,18 @@ tags: [bdk, bdk-cli,tutorial,multi-sig]
 
 > Generate the three individual Public Keys aka XPUBs using our Private key and descriptor path. 
 
-:arrow_forward: `export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path "m/84'/1'/0'/0" | jq -r ".xpub")`
+$ `export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path "m/84'/1'/0'/0" | jq -r ".xpub")`
 
-:arrow_forward: `export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path "m/84'/1'/0'/0" | jq -r ".xpub")`
+$ `export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path "m/84'/1'/0'/0" | jq -r ".xpub")`
 
-:arrow_forward: `export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path "m/84'/1'/0'/0" | jq -r ".xpub")`
+$ `export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path "m/84'/1'/0'/0" | jq -r ".xpub")`
 
 
 ![](https://i.imgur.com/xT3KRh4.gif)
 
 ### 2a: Verify XPUB environment variables
 
-:arrow_forward:    `env | grep XPUB`
+$    `env | grep XPUB`
 
 ![](https://i.imgur.com/SzAip9E.gif)
 
@@ -59,11 +59,11 @@ tags: [bdk, bdk-cli,tutorial,multi-sig]
 
 > Create the wallet Descriptor for each wallet
 
-:arrow_forward: `export DESCRIPTOR_00="$XPRV_00/84h/1h/0h/0/*"`
+$ `export DESCRIPTOR_00="$XPRV_00/84h/1h/0h/0/*"`
 
-:arrow_forward: `export DESCRIPTOR_01="$XPRV_01/84h/1h/0h/0/*"`
+$ `export DESCRIPTOR_01="$XPRV_01/84h/1h/0h/0/*"`
 
-:arrow_forward: `export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"`
+$ `export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"`
 
 
 ![](https://i.imgur.com/mFrWt6b.png)
@@ -75,13 +75,13 @@ tags: [bdk, bdk-cli,tutorial,multi-sig]
 
 - When creating the descriptor the order matters so be aware of that when following tutorial if you are for any reason changing the order of the policy.
 #### Multi-Sig-Wallet 0
-- [ ] :arrow_forward: `export MULTI_DESCRIPTOR_00=$(bdk-cli compile "thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))" | jq -r '.descriptor')`
+- [ ] $ `export MULTI_DESCRIPTOR_00=$(bdk-cli compile "thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))" | jq -r '.descriptor')`
 
 #### Multi-Sig-Wallet 1
-- [ ] :arrow_forward: `export MULTI_DESCRIPTOR_01=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))" | jq -r '.descriptor')`
+- [ ] $ `export MULTI_DESCRIPTOR_01=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))" | jq -r '.descriptor')`
 
 #### Multi-Sig-Wallet 2
-- [ ] :arrow_forward:  `export MULTI_DESCRIPTOR_02=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))" | jq -r '.descriptor')`
+- [ ] $  `export MULTI_DESCRIPTOR_02=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))" | jq -r '.descriptor')`
 
 ![](https://i.imgur.com/Yb8RmFS.gif)
 
@@ -114,7 +114,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 ### 4a: Verify Multi-Sig-Descriptor environment variables are active
 
-:arrow_forward: `env | grep MULTI`
+$ `env | grep MULTI`
 
 
 ![](https://i.imgur.com/aAgtlsi.gif)
@@ -123,11 +123,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 ## Step 5: Generate Receive Address by using Multi-Sig-Descriptor Wallets 
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address`
+$ `bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address`
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address`
+$ `bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address`
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address`
+$ `bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address`
 
 ![](https://i.imgur.com/w1fxPSn.gif)
 
@@ -141,7 +141,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 ## Step 7: Sync one of the Multi-Sig Wallets 
 
-:arrow_forward: ` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sync`
+$ ` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sync`
 
 ![](https://i.imgur.com/GuefgeI.gif)
 
@@ -149,7 +149,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 ## Step 8: Check Balance Multi-Sig Wallets
 
 
-:arrow_forward: ` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_balance`
+$ ` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_balance`
 
 ![](https://i.imgur.com/zNciCqF.gif)
 
@@ -160,7 +160,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 
 
-:arrow_forward:` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies`
+$` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies`
 
 :::info
 :+1: The output below confirms the command was successful.
@@ -243,12 +243,12 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 ### Export UNSIGNED_PSBT to environment variable
 
-:arrow_forward: `export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')`
+$ `export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')`
 
 
 ### Verify UNSIGNED_PSBT  environment variable 
 
-:arrow_forward: `env | grep UNSIGNED`
+$ `env | grep UNSIGNED`
 ![](https://i.imgur.com/djHaRDq.gif)
 
 ---
@@ -256,11 +256,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 ### 1st Wallet Signs the transaction 
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT`
+$ `bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT`
 
-:arrow_forward: `export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r '.psbt')`
+$ `export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r '.psbt')`
 
-:arrow_forward:`env | grep ONESIG`
+$`env | grep ONESIG`
 
 ```
 {
@@ -277,12 +277,12 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 ### 2nd Wallet Signs the transaction 
 
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT`
+$ `bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT`
 
-:arrow_forward: `export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r '.psbt')`
+$ `export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r '.psbt')`
 
 
-:arrow_forward:`env | grep SECONDSIG`
+$`env | grep SECONDSIG`
 
 ```
 {
@@ -298,7 +298,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 ***
 ## Step 12: Broadcast Transaction 
 
-:arrow_forward: `bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT`
+$ `bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT`
 
 
 ```
