@@ -58,7 +58,7 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ### `bdk-cli` installation:
 
 ```
-$  cargo install --features electrum  --version 0.6.0 bdk-cli
+$  cargo install --features "electrum,compiler"  --version 0.6.0 bdk-cli
 ```
 
 ## Step 0: Check Version of bdk-cli

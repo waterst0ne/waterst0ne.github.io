@@ -15,6 +15,21 @@ tags: [bdk, bdk-cli,tutorial,multi-sig]
 - Generate a receive address with a spending Policy of 2 out of 3 escrow aka multi-signature.
 - Intro to more complex but standard policies to create custom encumberances aka custom spending conditions for transactions. 
 
+---
+### Rust and Cargo installation:```
+```
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+***
+### `bdk-cli` installation:
+
+```
+$  cargo install --features "electrum,compiler"  --version 0.6.0 bdk-cli
+```
+
+---
+
 ## Step 1: Generate the XPRVs (Extended-Keys) and Save to environment variables
 
 > Create three private keys and each in their own environment variable
@@ -34,7 +49,7 @@ $ `env | grep XPRV`
 
 ![](https://i.imgur.com/ZerGPbO.gif)
 
-
+---
 ## Step 2: Generate XPUBs (Extended Public Keys) & Save to environment variables 
 
 > Generate the three individual Public Keys aka XPUBs using our Private key and descriptor path. 
@@ -68,7 +83,7 @@ $ `export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"`
 
 ![](https://i.imgur.com/mFrWt6b.png)
 
-
+---
 ## Step 4: Create Multi-Sig-Descriptor Wallets
 
 > This is how you create the 2-of-3 multi-sig output descriptor. You will need (one PrivateKey and two Xpubs) It consists of using the `compiler` function to parse `policy` to `mini-script` .
@@ -85,7 +100,8 @@ $ `export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"`
 
 ![](https://i.imgur.com/Yb8RmFS.gif)
 
-:::spoiler Click to show details : What is **Miniscript?** + Resources
+
+ What is **Miniscript?** + Resources
 
 More details  **Miniscript**, Policy: 
 
@@ -94,8 +110,7 @@ More details  **Miniscript**, Policy:
 [Minsc is a high-level scripting language](https://min.sc)
 
 
-
-:::
+Notes : 
 #### multi-sig 2 of 3 policy gets compiled to miniscript
 ```
 # policy
@@ -109,8 +124,6 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 ```
 
 
-***
-
 
 ### 4a: Verify Multi-Sig-Descriptor environment variables are active
 
@@ -119,8 +132,8 @@ $ `env | grep MULTI`
 
 ![](https://i.imgur.com/aAgtlsi.gif)
 
-***
 
+---
 ## Step 5: Generate Receive Address by using Multi-Sig-Descriptor Wallets 
 
 $ `bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address`
@@ -132,12 +145,15 @@ $ `bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 g
 ![](https://i.imgur.com/w1fxPSn.gif)
 
 
-:red_circle: Did you generate the same address for all three? Good! Else, something might be incorrect.
+> Did you generate the same address for all three? Good! Else, something might be incorrect.
 
+---
 ## Step 6: Send Testnet Bitcoin to the newly created receive-address
 
 [Bitcoin Testnet Faucet link:1](https://testnet-faucet.mempool.co)
 [Bitcoin Testnet Faucet link:2](https://bitcoinfaucet.uo1.net)
+
+---
 
 ## Step 7: Sync one of the Multi-Sig Wallets 
 
@@ -145,6 +161,7 @@ $ ` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 
 
 ![](https://i.imgur.com/GuefgeI.gif)
 
+---
 
 ## Step 8: Check Balance Multi-Sig Wallets
 
@@ -156,6 +173,7 @@ $ ` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 
 
 - Every wallet has access to sync and view balance. 
 
+---
 ## Step 9: Check Multi-Sig Policies on Descriptor Wallet
 
 
@@ -227,7 +245,7 @@ $` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 p
  -  [ ] More info on external here 
 [create_tx > external policies](https://bitcoindevkit.org/bdk-cli/interface/)
 
-***
+---
 ## Step 10: Create a Transaction (PSBT)
 - 1st Create a PSBT using the first wallet
 - 2nd Sign the PSBT with the first wallet
