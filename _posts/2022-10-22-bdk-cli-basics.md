@@ -1,6 +1,6 @@
 ---
-title: "Bitcoin Dev Kit bdk-cli-basics00"
-date: 2022-12-09T00:00:00+00:00
+title: "Bitcoin Dev Kit bdk-cli-basics Single-Signature 00"
+date: 2022-12-14T00:00:00+00:00
 author: Peter
 layout: post
 permalink: /bdk-cli-basics/

@@ -4,7 +4,7 @@
  <title>waterStone blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-12-16T08:50:40+03:00</updated>
+ <updated>2022-12-16T08:59:03+03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>waterStone</name>
@@ -13,96 +13,316 @@
 
  
  <entry>
-   <title>Bitcoin Developer Journey</title>
-   <link href="http://localhost:4000/bitcoin-dev-journey-22/"/>
-   <updated>2022-12-13T03:00:00+03:00</updated>
-   <id>http://localhost:4000/bitcoin-dev-journey</id>
-   <content type="html">&lt;h1 id=&quot;my-journey-into-bitcoin-development&quot;&gt;My Journey into Bitcoin Development&lt;/h1&gt;
+   <title>BDK: bdk-cli-basics 2-of-3 Multi-Signature</title>
+   <link href="http://localhost:4000/bdk-cli-basics-multisig/"/>
+   <updated>2022-12-15T03:00:00+03:00</updated>
+   <id>http://localhost:4000/bdk-cli-basics -multiSig</id>
+   <content type="html">&lt;h2 id=&quot;bitcoin-dev-kit--2-of-3-multi-signature-descriptor-wallet-using-bdk-using-command-line&quot;&gt;Bitcoin Dev Kit  2-of-3 Multi-Signature Descriptor Wallet using BDK using Command-Line&lt;/h2&gt;
 
-&lt;h3 id=&quot;who-am-i-&quot;&gt;Who am I ?&lt;/h3&gt;
-
-&lt;p&gt;My name is Pedro, I reside in the USA and I’m currently pursuing a Computer Science degree. Some of my interests include Bitcoin, Programming, and Computer Science.  When I’m not studying or at the university, I focus on the acquiring skills that will allow me to continue to create and contribute to Bitcoin open-source software. And if you’re curious, when I’m on break I catch up on reading or play guitar for a few minutes every day.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;2022-my-goal-become-a-bitcoin-oss-dev&quot;&gt;2022 My Goal become a Bitcoin OSS Dev&lt;/h3&gt;
-&lt;p&gt;After my realization of how important Bitcoin is as a technology for society, I decided in late  2021 that I would focus on becoming a Bitcoin developer as my new year’s goal. I started the year searching for methods of how I could contribute as an open-source developer. I read the Mastering Bitcoin book, I read blogs from current Bitcoin developers. I made the attempt to learn various programming languages. About a month into the year, I realize my plan wasn’t defined enough. I decided to take some advice my brother proposed to me a few months back.&lt;/p&gt;
-
-&lt;p&gt;My brother suggested I choose a single project instead of looking at three Bitcoin projects and try to keep up with the different programming languages.  I took his advice and updated my goals, “learn how to use Bitcoin Dev Kit and contribute by the end of year”.  Bitcoin Dev Kit (BDK) is an open-source library use to create Bitcoin wallet applications. I researched and read as much as I could about BDK. I also attempted the tutorials on BDK’s blog and failed terribly.  As I was learning BDK I noticed more and more knowledge gaps in my technical understanding of Bitcoin. This didn’t discourage me, it made me more curious to learn how Bitcoin functions. One day, as I’m scrolling through twitter I notice a Bitcoin meetup happening in about two weeks named  &lt;em&gt;BitDevs LA&lt;/em&gt; .  Surprisingly, BitDevs LA guest speaker that weekend happened to be Steve from the Bitcoin Dev Kit team. This was my chance to learn more about BDK and ask questions, I decided to go.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;bit-devs-la-my-first-bitcoin-meet-up&quot;&gt;Bit Devs LA, My first Bitcoin meet up&lt;/h3&gt;
-&lt;p&gt;BitDevs LA was my first Bitcoin meetup, the guest speaker from Bitcoin Dev Kit gave updates on the project and also what their goals were this  year. One of their goals this year was to on-board new devs and projects.  The talk was followed by a Socratic seminar and shortly after we met up at local restaurant. I met Andrew from BitDevs LA who was nice enough to introduce me to Steve from BDK. Long story short, I asked Steve many questions on how I can start contributing. He recommended I continue reading documentation, follow the project on Github and start learning Rust, and when I was ready to contribute in any way that I could.  He also suggested that I apply to Summer of Bitcoin (Bitcoin Internship) next year since application deadline for this year was over. Please make sure to pay them a visit in sats if you happen to be in LA next time 😊.&lt;/p&gt;
-
-&lt;p&gt;When I got home, I did a quick web search on Summer of Bitcoin and noticed the applications were still open. Even if the deadline was past the due date, I decided to create a proposal and submitted the Summer of Bitcoin application even if the due date was  past due. I thought to myself, what’s the worst they could say? No, try again next year? I applied anyway, I continued to learn more about BDK and Rust.&lt;/p&gt;
-
+&lt;h2 id=&quot;overview-of-the-tutorial&quot;&gt;Overview of the tutorial&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bitdevsla.org/&quot;&gt;BitDevs LA&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The purpose of this tutorial is to continue learning &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli&lt;/code&gt; as our tool manage a 2 of 3 multi-signature wallet.&lt;/li&gt;
+  &lt;li&gt;Generate a receive address with a spending Policy of 2 out of 3 escrow aka multi-signature.&lt;/li&gt;
+  &lt;li&gt;Intro to more complex but standard policies to create custom encumberances aka custom spending conditions for transactions.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-&lt;h3 id=&quot;summer-of-bitcoin-internship&quot;&gt;Summer of Bitcoin Internship&lt;/h3&gt;
-&lt;p&gt;A month later, I received a message from BDK for the Summer of Bitcoin internship. I could not believe my eyes; I was accepted to intern and be a part of Summer of Bitcoin `22. I had month before the internship started, I continued learn the tools I needed to be as prepared as possibly for the internship. I continued to work every day and learn more about BDK, this was my chance to learn and contribute. I don’t think I ever took a day off; every day is a chance to become better and more efficient. You receive, what you put into anything, you reap what you sow,  ran through my head.  You can read more about my Summer of Bitcoin experience here.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/sob-22-experience-bdk/&quot;&gt;“My Summer of Bitcoin experience with BDK”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&quot;step-1-generate-the-xprvs-extended-keys-and-save-to-environment-variables&quot;&gt;Step 1: Generate the XPRVs (Extended-Keys) and Save to environment variables&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Create three private keys and each in their own environment variable&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_00=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward:   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_01=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward:   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_02=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/FwgUdwK.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;1a-verify-xprv-environment-variables-are-active&quot;&gt;1a: Verify XPRV environment variables are Active&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPRV&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ZerGPbO.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-2-generate-xpubs-extended-public-keys--save-to-environment-variables&quot;&gt;Step 2: Generate XPUBs (Extended Public Keys) &amp;amp; Save to environment variables&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Generate the three individual Public Keys aka XPUBs using our Private key and descriptor path.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/xT3KRh4.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2a-verify-xpub-environment-variables&quot;&gt;2a: Verify XPUB environment variables&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward:    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPUB&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/SzAip9E.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+&lt;h2 id=&quot;step-3-create-single-wallet-descriptors&quot;&gt;Step 3: Create Single-Wallet Descriptors&lt;/h2&gt;
 
-&lt;h3 id=&quot;mini-grant-recipient&quot;&gt;Mini-grant recipient&lt;/h3&gt;
-&lt;p&gt;After Summer of Bitcoin had finished, I didn’t want to stop contributing to BDK, so I continued to work on it as much time as I could.  At the time, I was working on weekends delivering for a local pizza shop. I noticed a Superlunar mini-grant post on twitter for developers. I decided to apply and was fortunate enough to receive a mini-grant to work on BDK. This allowed me to quit my weekend job, continue my journey as an entry developer for BDK, and continue to focus on school also. My latest contribution was an appendix entry for the Mastering Bitcoin Book on BDK features and a few examples of how to use the bdk-cli app for quick testing and demonstration using Bitcoin features.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Create the wallet Descriptor for each wallet&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_00=&quot;$XPRV_00/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;tabconf-22&quot;&gt;TabConf ‘22&lt;/h3&gt;
-&lt;p&gt;Tabconf is the best Bitcoin conference for developers, and aspiring contributors, or anyone who wants to get involved in the Bitcoin space. I had zero plans to assist Tabconf `22, but as event was approaching I came across a Bitcoin podcast named “Building Builders”. It’s hosted by Rod @bitkite with guest speaker Stephen from Bitcoin Design, he happened to be talking about TabConf ‘22. After listening to the podcast, I was convinced I had to attend TabConf.  The first day of Tabconf was named “Builder day”,a day for open-source Bitcoin projects to onboard and demo their projects to individuals that want to learn how to contribute to Bitcoin OSS. On builder day, I had the opportunity to help at the Bitcoin Dev Kit table. I assisted guests with BDK questions and troubleshoot when requested. Day 2 was filled with developer focused workshops. I met so many talented and inspiring Bitcoiners at the conference, being there makes you realize how important Bitcoin is to many individuals around the globe.  Tabconf is a great place to be at if you want to learn more technical details, attend workshops, and network with some of the brightest minds in the Bitcoin space.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://2023.tabconf.com/&quot;&gt;TABCONF `23&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_01=&quot;$XPRV_01/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;bitdevs-atlanta-and-terminus-electric-money-lab&quot;&gt;BitDevs Atlanta and Terminus Electric Money Lab&lt;/h3&gt;
-&lt;p&gt;Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
-Please make sure to pay them a visit in your  sats-mobile if you happen to be in Atlanta.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://genbitcoin.org/&quot;&gt;Generation Bitcoin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://atlantabitdevs.org/&quot;&gt;BitDevs ATL&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://terminus.money/&quot;&gt;Terminus Electric Money Lab&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_02=&quot;$XPRV_02/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/mFrWt6b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;pacific-bitcoin-22&quot;&gt;Pacific Bitcoin ‘22&lt;/h3&gt;
-&lt;p&gt;This year, I also had the opportunity to attend Pacific Bitcoin ‘22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the chance to listen to many Bitcoiners perspectives, their ambitions, and their goals. What do you mean a bear market ? Bitcoiners are still building. 😊&lt;/p&gt;
+&lt;h2 id=&quot;step-4-create-multi-sig-descriptor-wallets&quot;&gt;Step 4: Create Multi-Sig-Descriptor Wallets&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;pacific-bitcoin-23&quot;&gt;&lt;a href=&quot;https://www.pacificbitcoin.com/&quot;&gt;Pacific Bitcoin ‘23&lt;/a&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This is how you create the 2-of-3 multi-sig output descriptor. You will need (one PrivateKey and two Xpubs) It consists of using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compiler&lt;/code&gt; function to parse &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;policy&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mini-script&lt;/code&gt; .&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li&gt;When creating the descriptor the order matters so be aware of that when following tutorial if you are for any reason changing the order of the policy.
+    &lt;h4 id=&quot;multi-sig-wallet-0&quot;&gt;Multi-Sig-Wallet 0&lt;/h4&gt;
   &lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_00=$(bdk-cli compile &quot;thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;end-of-the-year-reflections&quot;&gt;End of the Year Reflections&lt;/h3&gt;
+&lt;h4 id=&quot;multi-sig-wallet-1&quot;&gt;Multi-Sig-Wallet 1&lt;/h4&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_01=$(bdk-cli compile &quot;thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;This is just the beginning of my developer journey. This year has been better than I could have ever hoped for. I accomplished a lot more than I thought I would, and less than I wish I could.  There is still much to learn and contribute to in the Bitcoin space. My hope is that you are encouraged to take the leap of faith and make it your goal to contribute to Bitcoin for next year and if you can get involved in your local communities.  Whether that is through education, art, advocacy, development, ux or assisting in Bitcoin meetups. I’m still relatively new to the Bitcoin space and development, but if you have any questions feel free to reach out. If you have a passion for Bitcoin, like being challenged, and enjoy proof of work Bitcoin is for you 😊.
-Until next time. 
-Stay humble and stack Sats!&lt;/p&gt;
+&lt;h4 id=&quot;multi-sig-wallet-2&quot;&gt;Multi-Sig-Wallet 2&lt;/h4&gt;
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;:arrow_forward:  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_02=$(bdk-cli compile &quot;thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Bitcoin Open Source Projects and Communities&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Yb8RmFS.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit&lt;/a&gt;
-&lt;a href=&quot;https://lightningdevkit.org/&quot;&gt;Lightning Dev Kit&lt;/a&gt;
-&lt;a href=&quot;https://bitcoin.design/&quot;&gt;Bitcoin Design&lt;/a&gt;
-&lt;a href=&quot;https://www.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;:::spoiler Click to show details : What is &lt;strong&gt;Miniscript?&lt;/strong&gt; + Resources&lt;/p&gt;
+
+&lt;p&gt;More details  &lt;strong&gt;Miniscript&lt;/strong&gt;, Policy:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bitcoin.sipa.be/miniscript/&quot;&gt;MiniScript&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://min.sc&quot;&gt;Minsc is a high-level scripting language&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:::&lt;/p&gt;
+&lt;h4 id=&quot;multi-sig-2-of-3-policy-gets-compiled-to-miniscript&quot;&gt;multi-sig 2 of 3 policy gets compiled to miniscript&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# policy
+
+thresh(2,pk(XPRV_A),pk(XPUB_B),pk(XPUB_C)) 
+
+# miniscript
+
+wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;4a-verify-multi-sig-descriptor-environment-variables-are-active&quot;&gt;4a: Verify Multi-Sig-Descriptor environment variables are active&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep MULTI&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/aAgtlsi.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;step-5-generate-receive-address-by-using-multi-sig-descriptor-wallets&quot;&gt;Step 5: Generate Receive Address by using Multi-Sig-Descriptor Wallets&lt;/h2&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/w1fxPSn.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;:red_circle: Did you generate the same address for all three? Good! Else, something might be incorrect.&lt;/p&gt;
+
+&lt;h2 id=&quot;step-6-send-testnet-bitcoin-to-the-newly-created-receive-address&quot;&gt;Step 6: Send Testnet Bitcoin to the newly created receive-address&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://testnet-faucet.mempool.co&quot;&gt;Bitcoin Testnet Faucet link:1&lt;/a&gt;
+&lt;a href=&quot;https://bitcoinfaucet.uo1.net&quot;&gt;Bitcoin Testnet Faucet link:2&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-7-sync-one-of-the-multi-sig-wallets&quot;&gt;Step 7: Sync one of the Multi-Sig Wallets&lt;/h2&gt;
+
+&lt;p&gt;:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 sync`&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/GuefgeI.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;step-8-check-balance-multi-sig-wallets&quot;&gt;Step 8: Check Balance Multi-Sig Wallets&lt;/h2&gt;
+
+&lt;p&gt;:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 get_balance`&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/zNciCqF.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Every wallet has access to sync and view balance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;step-9-check-multi-sig-policies-on-descriptor-wallet&quot;&gt;Step 9: Check Multi-Sig Policies on Descriptor Wallet&lt;/h2&gt;
+
+&lt;p&gt;:arrow_forward:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:::info
+:+1: The output below confirms the command was successful.
+::::&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;external&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;contribution&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;conditions&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;0&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;items&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+        0
+      &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;m&quot;&lt;/span&gt;: 2,
+      &lt;span class=&quot;s2&quot;&gt;&quot;n&quot;&lt;/span&gt;: 3,
+      &lt;span class=&quot;s2&quot;&gt;&quot;sorted&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;PARTIAL&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;seaxtqqn&quot;&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;keys&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fingerprint&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;7cdf2d46&quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fingerprint&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;fc7870cd&quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;fingerprint&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;26b03333&quot;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;satisfaction&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;items&quot;&lt;/span&gt;: &lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;m&quot;&lt;/span&gt;: 2,
+      &lt;span class=&quot;s2&quot;&gt;&quot;n&quot;&lt;/span&gt;: 3,
+      &lt;span class=&quot;s2&quot;&gt;&quot;sorted&quot;&lt;/span&gt;: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;,
+      &lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;PARTIAL&quot;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+    &lt;span class=&quot;s2&quot;&gt;&quot;threshold&quot;&lt;/span&gt;: 2,
+    &lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;: &lt;span class=&quot;s2&quot;&gt;&quot;MULTISIG&quot;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+  &lt;span class=&quot;s2&quot;&gt;&quot;internal&quot;&lt;/span&gt;: null
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+### SpendingPolicyRequired for complex descriptors 
+
+--external_policy &quot;{\&quot;seaxtqqn\&quot;: [0,1]}&quot;
+     &amp;lt;-rootnode-&amp;gt;&amp;lt;children #0 and #1 of root node&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Save the “id”: We will need to use this ‘‘id’’ later.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;More info on external here 
+&lt;a href=&quot;https://bitcoindevkit.org/bdk-cli/interface/&quot;&gt;create_tx &amp;gt; external policies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-10-create-a-transaction-psbt&quot;&gt;Step 10: Create a Transaction (PSBT)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1st Create a PSBT using the first wallet&lt;/li&gt;
+  &lt;li&gt;2nd Sign the PSBT with the first wallet&lt;/li&gt;
+  &lt;li&gt;3rd  Sign PSBT with the second wallet&lt;/li&gt;
+  &lt;li&gt;Broadcast PSBT&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;export-unsigned_psbt-to-environment-variable&quot;&gt;Export UNSIGNED_PSBT to environment variable&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy &quot;{\&quot;CHANGE_ID_HERE\&quot;: [0,1]}&quot; | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;verify-unsigned_psbt--environment-variable&quot;&gt;Verify UNSIGNED_PSBT  environment variable&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep UNSIGNED&lt;/code&gt;
+&lt;img src=&quot;https://i.imgur.com/djHaRDq.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-11-sign-the-transaction&quot;&gt;Step 11: SIGN the Transaction&lt;/h2&gt;
+
+&lt;h3 id=&quot;1st-wallet-signs-the-transaction&quot;&gt;1st Wallet Signs the transaction&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep ONESIG&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;is_finalized&quot;: false,
+  &quot;psbt&quot;: &quot;cHNidP8BAFUBAAAAAdYCtva/7Rkt+fgFu3mxAdaPh4uTbgBL3HmYZgcEKWygAAAAAAD/////AQqGAQAAAAAAGXapFDRKD0jKFQ7CuQOBdmC5tosTpnAmiKwAAAAAAAEA6gIAAAAAAQFLyGFJFK884DGBM1WgskRZ6gKp/7oZ+Z30u0+wF3pZYAEAAAAA/v///wKghgEAAAAAACIAINHcOQLE6GpJ3J+FOzn/be+HApxW8sZtGqfA3TBW+NYX91hoOAAAAAAWABTPQDZx2wYYIn+ug2pZBmWBn0Tu/gJHMEQCIHu6GmRMDgPZyTx+klFMA9VujR3qDA/Y08kSkRvOaChjAiBAtExtGAYLuQ/DDJzCqLlNZ1bMB3MV+nxsLfTdI9YcYwEhA0b8lz+kt0xHfR/tjUKOc2Nt2L61pDd5vJ/lsKi8pw9MmFUjAAEBK6CGAQAAAAAAIgAg0dw5AsToakncn4U7Of9t74cCnFbyxm0ap8DdMFb41hciAgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDUgwRQIhAJdILr7G3UzYylyr2fA13MFsz/jG4+iZlKeEkX79d082AiA99UF0/uFyXBVNUmuGaxdHL7wlhzqfbgGLMREN0z/O6QEBBWlSIQIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDSEDzsDXexRPSxeXiLJoS0i2fQlOoOGHmo+Dhaeaq3oHV6YhAjGKA2Dqg+QeMICBAifYslQF2WrehLEQ0iEOpp/+eQ0NU64iBgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDRh83y1GVAAAgAEAAIAAAACAAAAAAAAAAAAiBgIxigNg6oPkHjCAgQIn2LJUBdlq3oSxENIhDqaf/nkNDRgmsDMzVAAAgAEAAIAAAACAAAAAAAAAAAAiBgPOwNd7FE9LF5eIsmhLSLZ9CU6g4Yeaj4OFp5qregdXphj8eHDNVAAAgAEAAIAAAACAAAAAAAAAAAAAAA==&quot;
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/0w4sK5y.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;2nd-wallet-signs-the-transaction&quot;&gt;2nd Wallet Signs the transaction&lt;/h3&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;:arrow_forward:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep SECONDSIG&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;is_finalized&quot;: true,
+  &quot;psbt&quot;: &quot;cHNidP8BAFUBAAAAAdYCtva/7Rkt+fgFu3mxAdaPh4uTbgBL3HmYZgcEKWygAAAAAAD/////AQqGAQAAAAAAGXapFDRKD0jKFQ7CuQOBdmC5tosTpnAmiKwAAAAAAAEA6gIAAAAAAQFLyGFJFK884DGBM1WgskRZ6gKp/7oZ+Z30u0+wF3pZYAEAAAAA/v///wKghgEAAAAAACIAINHcOQLE6GpJ3J+FOzn/be+HApxW8sZtGqfA3TBW+NYX91hoOAAAAAAWABTPQDZx2wYYIn+ug2pZBmWBn0Tu/gJHMEQCIHu6GmRMDgPZyTx+klFMA9VujR3qDA/Y08kSkRvOaChjAiBAtExtGAYLuQ/DDJzCqLlNZ1bMB3MV+nxsLfTdI9YcYwEhA0b8lz+kt0xHfR/tjUKOc2Nt2L61pDd5vJ/lsKi8pw9MmFUjAAEBK6CGAQAAAAAAIgAg0dw5AsToakncn4U7Of9t74cCnFbyxm0ap8DdMFb41hciAgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDUgwRQIhAJdILr7G3UzYylyr2fA13MFsz/jG4+iZlKeEkX79d082AiA99UF0/uFyXBVNUmuGaxdHL7wlhzqfbgGLMREN0z/O6QEiAgPOwNd7FE9LF5eIsmhLSLZ9CU6g4Yeaj4OFp5qregdXpkgwRQIhAO2aRERcublhAzToshkZRMg2I8GaE7mM2ECr0vYyuscmAiB5KK4ETlvrLqL0QbcRbGqrSwIa9lVuOqP3f5qCnGRMaQEBBWlSIQIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDSEDzsDXexRPSxeXiLJoS0i2fQlOoOGHmo+Dhaeaq3oHV6YhAjGKA2Dqg+QeMICBAifYslQF2WrehLEQ0iEOpp/+eQ0NU64iBgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDRh83y1GVAAAgAEAAIAAAACAAAAAAAAAAAAiBgIxigNg6oPkHjCAgQIn2LJUBdlq3oSxENIhDqaf/nkNDRgmsDMzVAAAgAEAAIAAAACAAAAAAAAAAAAiBgPOwNd7FE9LF5eIsmhLSLZ9CU6g4Yeaj4OFp5qregdXphj8eHDNVAAAgAEAAIAAAACAAAAAAAAAAAABBwABCP3+AAQASDBFAiEAl0guvsbdTNjKXKvZ8DXcwWzP+Mbj6JmUp4SRfv13TzYCID31QXT+4XJcFU1Sa4ZrF0cvvCWHOp9uAYsxEQ3TP87pAUgwRQIhAO2aRERcublhAzToshkZRMg2I8GaE7mM2ECr0vYyuscmAiB5KK4ETlvrLqL0QbcRbGqrSwIa9lVuOqP3f5qCnGRMaQFpUiECI1AiHZ8q+qw7bjYVTbeGQQ3L2C2sH6CW82z8sXP1jQ0hA87A13sUT0sXl4iyaEtItn0JTqDhh5qPg4Wnmqt6B1emIQIxigNg6oPkHjCAgQIn2LJUBdlq3oSxENIhDqaf/nkNDVOuAAA=&quot;
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/OdLHnJ3.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-12-broadcast-transaction&quot;&gt;Step 12: Broadcast Transaction&lt;/h2&gt;
+
+&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;txid&quot;: &quot;61da2451874a483aa8d1d0787c7680d157639f284840de8885098cac43f6cc2f&quot;
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/M7s0Fd6.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;verify-transaction&quot;&gt;Verify Transaction&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Verify transcation in the memory pool on testnet &lt;a href=&quot;https://mempool.space/testnet&quot;&gt;Mempool-testnet!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </content>
  </entry>
  
  <entry>
-   <title>Bitcoin Dev Kit bdk-cli-basics00</title>
+   <title>Bitcoin Dev Kit bdk-cli-basics Single-Signature 00</title>
    <link href="http://localhost:4000/bdk-cli-basics/"/>
-   <updated>2022-12-09T03:00:00+03:00</updated>
+   <updated>2022-12-14T03:00:00+03:00</updated>
    <id>http://localhost:4000/bdk-cli-basics</id>
    <content type="html">&lt;h2 id=&quot;how-to-use-bdk-cli-basics&quot;&gt;How to use bdk-cli basics&lt;/h2&gt;
 &lt;h3 id=&quot;tutorial-goals&quot;&gt;Tutorial Goals&lt;/h3&gt;
@@ -433,6 +653,93 @@ Note: This happens when you name the wallet the same name as previous created wa
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://min.sc&quot;&gt;MinscA Miniscript-based scripting language for Bitcoin contracts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Bitcoin Developer Journey</title>
+   <link href="http://localhost:4000/bitcoin-dev-journey-22/"/>
+   <updated>2022-12-13T03:00:00+03:00</updated>
+   <id>http://localhost:4000/bitcoin-dev-journey</id>
+   <content type="html">&lt;h1 id=&quot;my-journey-into-bitcoin-development&quot;&gt;My Journey into Bitcoin Development&lt;/h1&gt;
+
+&lt;h3 id=&quot;who-am-i-&quot;&gt;Who am I ?&lt;/h3&gt;
+
+&lt;p&gt;My name is Pedro, I reside in the USA and I’m currently pursuing a Computer Science degree. Some of my interests include Bitcoin, Programming, and Computer Science.  When I’m not studying or at the university, I focus on the acquiring skills that will allow me to continue to create and contribute to Bitcoin open-source software. And if you’re curious, when I’m on break I catch up on reading or play guitar for a few minutes every day.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;2022-my-goal-become-a-bitcoin-oss-dev&quot;&gt;2022 My Goal become a Bitcoin OSS Dev&lt;/h3&gt;
+&lt;p&gt;After my realization of how important Bitcoin is as a technology for society, I decided in late  2021 that I would focus on becoming a Bitcoin developer as my new year’s goal. I started the year searching for methods of how I could contribute as an open-source developer. I read the Mastering Bitcoin book, I read blogs from current Bitcoin developers. I made the attempt to learn various programming languages. About a month into the year, I realize my plan wasn’t defined enough. I decided to take some advice my brother proposed to me a few months back.&lt;/p&gt;
+
+&lt;p&gt;My brother suggested I choose a single project instead of looking at three Bitcoin projects and try to keep up with the different programming languages.  I took his advice and updated my goals, “learn how to use Bitcoin Dev Kit and contribute by the end of year”.  Bitcoin Dev Kit (BDK) is an open-source library use to create Bitcoin wallet applications. I researched and read as much as I could about BDK. I also attempted the tutorials on BDK’s blog and failed terribly.  As I was learning BDK I noticed more and more knowledge gaps in my technical understanding of Bitcoin. This didn’t discourage me, it made me more curious to learn how Bitcoin functions. One day, as I’m scrolling through twitter I notice a Bitcoin meetup happening in about two weeks named  &lt;em&gt;BitDevs LA&lt;/em&gt; .  Surprisingly, BitDevs LA guest speaker that weekend happened to be Steve from the Bitcoin Dev Kit team. This was my chance to learn more about BDK and ask questions, I decided to go.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;bit-devs-la-my-first-bitcoin-meet-up&quot;&gt;Bit Devs LA, My first Bitcoin meet up&lt;/h3&gt;
+&lt;p&gt;BitDevs LA was my first Bitcoin meetup, the guest speaker from Bitcoin Dev Kit gave updates on the project and also what their goals were this  year. One of their goals this year was to on-board new devs and projects.  The talk was followed by a Socratic seminar and shortly after we met up at local restaurant. I met Andrew from BitDevs LA who was nice enough to introduce me to Steve from BDK. Long story short, I asked Steve many questions on how I can start contributing. He recommended I continue reading documentation, follow the project on Github and start learning Rust, and when I was ready to contribute in any way that I could.  He also suggested that I apply to Summer of Bitcoin (Bitcoin Internship) next year since application deadline for this year was over. Please make sure to pay them a visit in sats if you happen to be in LA next time 😊.&lt;/p&gt;
+
+&lt;p&gt;When I got home, I did a quick web search on Summer of Bitcoin and noticed the applications were still open. Even if the deadline was past the due date, I decided to create a proposal and submitted the Summer of Bitcoin application even if the due date was  past due. I thought to myself, what’s the worst they could say? No, try again next year? I applied anyway, I continued to learn more about BDK and Rust.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitdevsla.org/&quot;&gt;BitDevs LA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;summer-of-bitcoin-internship&quot;&gt;Summer of Bitcoin Internship&lt;/h3&gt;
+&lt;p&gt;A month later, I received a message from BDK for the Summer of Bitcoin internship. I could not believe my eyes; I was accepted to intern and be a part of Summer of Bitcoin `22. I had month before the internship started, I continued learn the tools I needed to be as prepared as possibly for the internship. I continued to work every day and learn more about BDK, this was my chance to learn and contribute. I don’t think I ever took a day off; every day is a chance to become better and more efficient. You receive, what you put into anything, you reap what you sow,  ran through my head.  You can read more about my Summer of Bitcoin experience here.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/sob-22-experience-bdk/&quot;&gt;“My Summer of Bitcoin experience with BDK”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;mini-grant-recipient&quot;&gt;Mini-grant recipient&lt;/h3&gt;
+&lt;p&gt;After Summer of Bitcoin had finished, I didn’t want to stop contributing to BDK, so I continued to work on it as much time as I could.  At the time, I was working on weekends delivering for a local pizza shop. I noticed a Superlunar mini-grant post on twitter for developers. I decided to apply and was fortunate enough to receive a mini-grant to work on BDK. This allowed me to quit my weekend job, continue my journey as an entry developer for BDK, and continue to focus on school also. My latest contribution was an appendix entry for the Mastering Bitcoin Book on BDK features and a few examples of how to use the bdk-cli app for quick testing and demonstration using Bitcoin features.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;tabconf-22&quot;&gt;TabConf ‘22&lt;/h3&gt;
+&lt;p&gt;Tabconf is the best Bitcoin conference for developers, and aspiring contributors, or anyone who wants to get involved in the Bitcoin space. I had zero plans to assist Tabconf `22, but as event was approaching I came across a Bitcoin podcast named “Building Builders”. It’s hosted by Rod @bitkite with guest speaker Stephen from Bitcoin Design, he happened to be talking about TabConf ‘22. After listening to the podcast, I was convinced I had to attend TabConf.  The first day of Tabconf was named “Builder day”,a day for open-source Bitcoin projects to onboard and demo their projects to individuals that want to learn how to contribute to Bitcoin OSS. On builder day, I had the opportunity to help at the Bitcoin Dev Kit table. I assisted guests with BDK questions and troubleshoot when requested. Day 2 was filled with developer focused workshops. I met so many talented and inspiring Bitcoiners at the conference, being there makes you realize how important Bitcoin is to many individuals around the globe.  Tabconf is a great place to be at if you want to learn more technical details, attend workshops, and network with some of the brightest minds in the Bitcoin space.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://2023.tabconf.com/&quot;&gt;TABCONF `23&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bitdevs-atlanta-and-terminus-electric-money-lab&quot;&gt;BitDevs Atlanta and Terminus Electric Money Lab&lt;/h3&gt;
+&lt;p&gt;Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
+Please make sure to pay them a visit in your  sats-mobile if you happen to be in Atlanta.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://genbitcoin.org/&quot;&gt;Generation Bitcoin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atlantabitdevs.org/&quot;&gt;BitDevs ATL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://terminus.money/&quot;&gt;Terminus Electric Money Lab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;pacific-bitcoin-22&quot;&gt;Pacific Bitcoin ‘22&lt;/h3&gt;
+&lt;p&gt;This year, I also had the opportunity to attend Pacific Bitcoin ‘22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the chance to listen to many Bitcoiners perspectives, their ambitions, and their goals. What do you mean a bear market ? Bitcoiners are still building. 😊&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;pacific-bitcoin-23&quot;&gt;&lt;a href=&quot;https://www.pacificbitcoin.com/&quot;&gt;Pacific Bitcoin ‘23&lt;/a&gt;&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;end-of-the-year-reflections&quot;&gt;End of the Year Reflections&lt;/h3&gt;
+
+&lt;p&gt;This is just the beginning of my developer journey. This year has been better than I could have ever hoped for. I accomplished a lot more than I thought I would, and less than I wish I could.  There is still much to learn and contribute to in the Bitcoin space. My hope is that you are encouraged to take the leap of faith and make it your goal to contribute to Bitcoin for next year and if you can get involved in your local communities.  Whether that is through education, art, advocacy, development, ux or assisting in Bitcoin meetups. I’m still relatively new to the Bitcoin space and development, but if you have any questions feel free to reach out. If you have a passion for Bitcoin, like being challenged, and enjoy proof of work Bitcoin is for you 😊.
+Until next time. 
+Stay humble and stack Sats!&lt;/p&gt;
+
+&lt;p&gt;Bitcoin Open Source Projects and Communities&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit&lt;/a&gt;
+&lt;a href=&quot;https://lightningdevkit.org/&quot;&gt;Lightning Dev Kit&lt;/a&gt;
+&lt;a href=&quot;https://bitcoin.design/&quot;&gt;Bitcoin Design&lt;/a&gt;
+&lt;a href=&quot;https://www.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin&lt;/a&gt;&lt;/p&gt;
+
 </content>
  </entry>
  

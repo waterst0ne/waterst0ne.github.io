@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>BDK: bdk-cli-basics 2-of-3 Multi-Signature - waterStone blog</title>
+		<meta name="description" content="waterStone blog">
+		<meta name="keywords" content="bdkbdk-clitutorialmulti-sig">
+		<base href="http://localhost:4000" />
+		
+    	<meta content="2022-12-15T03:00:00+03:00" property="article:published_time">
+    	<meta content="http://localhost:4000/about/" property="article:author">
+  		
+		<meta property="og:site_name" content="waterStone blog">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://localhost:4000/bdk-cli-basics-multisig/"/>
+		<meta property="og:title" content="BDK: bdk-cli-basics 2-of-3 Multi-Signature - waterStone blog" />
+		<meta property="og:description" content="waterStone blog" />
+		<meta property="og:image" content="http://localhost:4000/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="BDK: bdk-cli-basics 2-of-3 Multi-Signature - waterStone blog" />
+		<meta property="twitter:description" content="waterStone blog" />
+		<meta property="twitter:image" content="http://localhost:4000/assets/images/favicon.png" />
+		<link rel="stylesheet" href="assets/css/highlight.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="waterStone blog" href="http://localhost:4000/atom.xml">
+		<link rel="alternate" type="application/json" title="waterStone blog" href="http://localhost:4000/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="http://localhost:4000/sitemap.xml" />
+		<meta name="google-site-verification" content="XXX" />
+	</head>
+<body>
+<div class="container">
+	<div class="profile">
+		<a href="http://localhost:4000"><img src="assets/images/profile.jpg" class="profile-image"></a>
+		<div class="profile-about">
+			<h2 style="margin-bottom: 0; font-weight: 700;">waterStone</h2>
+			
+			
+				<a href="https://twitter.com/parallelogos" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+			
+			
+			
+			
+				<a href="https://github.com/waterst0ne" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
+			
+			
+			<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
+			<br>
+			Computer Science @parallelogos <br> Bitcoin Contributor @BitcoinDevKit <br> Open Source /#linux
+			<br>
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	
+<div class="post-header">
+	<div class="post-date">15.12.2022</div>
+	<div class="post-share">
+		Share:&nbsp; 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=http://localhost:4000/bdk-cli-basics -multiSig&amp;text=BDK: bdk-cli-basics 2-of-3 Multi-Signature - http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://api.whatsapp.com/send?text=http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+	</div>
+</div>
+
+<div class="blog-post-content">
+	<h1>BDK: bdk-cli-basics 2-of-3 Multi-Signature</h1>
+	<h2 id="bitcoin-dev-kit--2-of-3-multi-signature-descriptor-wallet-using-bdk-using-command-line">Bitcoin Dev Kit  2-of-3 Multi-Signature Descriptor Wallet using BDK using Command-Line</h2>
+
+<h2 id="overview-of-the-tutorial">Overview of the tutorial</h2>
+<ul>
+  <li>The purpose of this tutorial is to continue learning <code class="language-plaintext highlighter-rouge">bdk-cli</code> as our tool manage a 2 of 3 multi-signature wallet.</li>
+  <li>Generate a receive address with a spending Policy of 2 out of 3 escrow aka multi-signature.</li>
+  <li>Intro to more complex but standard policies to create custom encumberances aka custom spending conditions for transactions.</li>
+</ul>
+
+<h2 id="step-1-generate-the-xprvs-extended-keys-and-save-to-environment-variables">Step 1: Generate the XPRVs (Extended-Keys) and Save to environment variables</h2>
+
+<blockquote>
+  <p>Create three private keys and each in their own environment variable</p>
+</blockquote>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPRV_00=$(bdk-cli key generate | jq -r '.xprv')</code></p>
+
+<p>:arrow_forward:   <code class="language-plaintext highlighter-rouge">export XPRV_01=$(bdk-cli key generate | jq -r '.xprv')</code></p>
+
+<p>:arrow_forward:   <code class="language-plaintext highlighter-rouge">export XPRV_02=$(bdk-cli key generate | jq -r '.xprv')</code></p>
+
+<p><img src="https://i.imgur.com/FwgUdwK.gif" alt="" /></p>
+
+<h3 id="1a-verify-xprv-environment-variables-are-active">1a: Verify XPRV environment variables are Active</h3>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">env | grep XPRV</code></p>
+
+<p><img src="https://i.imgur.com/ZerGPbO.gif" alt="" /></p>
+
+<h2 id="step-2-generate-xpubs-extended-public-keys--save-to-environment-variables">Step 2: Generate XPUBs (Extended Public Keys) &amp; Save to environment variables</h2>
+
+<blockquote>
+  <p>Generate the three individual Public Keys aka XPUBs using our Private key and descriptor path.</p>
+</blockquote>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
+
+<p><img src="https://i.imgur.com/xT3KRh4.gif" alt="" /></p>
+
+<h3 id="2a-verify-xpub-environment-variables">2a: Verify XPUB environment variables</h3>
+
+<p>:arrow_forward:    <code class="language-plaintext highlighter-rouge">env | grep XPUB</code></p>
+
+<p><img src="https://i.imgur.com/SzAip9E.gif" alt="" /></p>
+
+<hr />
+<h2 id="step-3-create-single-wallet-descriptors">Step 3: Create Single-Wallet Descriptors</h2>
+
+<blockquote>
+  <p>Create the wallet Descriptor for each wallet</p>
+</blockquote>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_00="$XPRV_00/84h/1h/0h/0/*"</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_01="$XPRV_01/84h/1h/0h/0/*"</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"</code></p>
+
+<p><img src="https://i.imgur.com/mFrWt6b.png" alt="" /></p>
+
+<h2 id="step-4-create-multi-sig-descriptor-wallets">Step 4: Create Multi-Sig-Descriptor Wallets</h2>
+
+<blockquote>
+  <p>This is how you create the 2-of-3 multi-sig output descriptor. You will need (one PrivateKey and two Xpubs) It consists of using the <code class="language-plaintext highlighter-rouge">compiler</code> function to parse <code class="language-plaintext highlighter-rouge">policy</code> to <code class="language-plaintext highlighter-rouge">mini-script</code> .</p>
+</blockquote>
+
+<ul class="task-list">
+  <li>When creating the descriptor the order matters so be aware of that when following tutorial if you are for any reason changing the order of the policy.
+    <h4 id="multi-sig-wallet-0">Multi-Sig-Wallet 0</h4>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />:arrow_forward: <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_00=$(bdk-cli compile "thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))" | jq -r '.descriptor')</code></li>
+</ul>
+
+<h4 id="multi-sig-wallet-1">Multi-Sig-Wallet 1</h4>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />:arrow_forward: <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_01=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))" | jq -r '.descriptor')</code></li>
+</ul>
+
+<h4 id="multi-sig-wallet-2">Multi-Sig-Wallet 2</h4>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />:arrow_forward:  <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_02=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))" | jq -r '.descriptor')</code></li>
+</ul>
+
+<p><img src="https://i.imgur.com/Yb8RmFS.gif" alt="" /></p>
+
+<p>:::spoiler Click to show details : What is <strong>Miniscript?</strong> + Resources</p>
+
+<p>More details  <strong>Miniscript</strong>, Policy:</p>
+
+<p><a href="https://bitcoin.sipa.be/miniscript/">MiniScript</a></p>
+
+<p><a href="https://min.sc">Minsc is a high-level scripting language</a></p>
+
+<p>:::</p>
+<h4 id="multi-sig-2-of-3-policy-gets-compiled-to-miniscript">multi-sig 2 of 3 policy gets compiled to miniscript</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># policy
+
+thresh(2,pk(XPRV_A),pk(XPUB_B),pk(XPUB_C)) 
+
+# miniscript
+
+wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
+
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="4a-verify-multi-sig-descriptor-environment-variables-are-active">4a: Verify Multi-Sig-Descriptor environment variables are active</h3>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">env | grep MULTI</code></p>
+
+<p><img src="https://i.imgur.com/aAgtlsi.gif" alt="" /></p>
+
+<hr />
+
+<h2 id="step-5-generate-receive-address-by-using-multi-sig-descriptor-wallets">Step 5: Generate Receive Address by using Multi-Sig-Descriptor Wallets</h2>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address</code></p>
+
+<p><img src="https://i.imgur.com/w1fxPSn.gif" alt="" /></p>
+
+<p>:red_circle: Did you generate the same address for all three? Good! Else, something might be incorrect.</p>
+
+<h2 id="step-6-send-testnet-bitcoin-to-the-newly-created-receive-address">Step 6: Send Testnet Bitcoin to the newly created receive-address</h2>
+
+<p><a href="https://testnet-faucet.mempool.co">Bitcoin Testnet Faucet link:1</a>
+<a href="https://bitcoinfaucet.uo1.net">Bitcoin Testnet Faucet link:2</a></p>
+
+<h2 id="step-7-sync-one-of-the-multi-sig-wallets">Step 7: Sync one of the Multi-Sig Wallets</h2>
+
+<p>:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 sync`</p>
+
+<p><img src="https://i.imgur.com/GuefgeI.gif" alt="" /></p>
+
+<h2 id="step-8-check-balance-multi-sig-wallets">Step 8: Check Balance Multi-Sig Wallets</h2>
+
+<p>:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 get_balance`</p>
+
+<p><img src="https://i.imgur.com/zNciCqF.gif" alt="" /></p>
+
+<ul>
+  <li>Every wallet has access to sync and view balance.</li>
+</ul>
+
+<h2 id="step-9-check-multi-sig-policies-on-descriptor-wallet">Step 9: Check Multi-Sig Policies on Descriptor Wallet</h2>
+
+<p>:arrow_forward:<code class="language-plaintext highlighter-rouge"> bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies</code></p>
+
+<p>:::info
+:+1: The output below confirms the command was successful.
+::::</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
+  <span class="s2">"external"</span>: <span class="o">{</span>
+    <span class="s2">"contribution"</span>: <span class="o">{</span>
+      <span class="s2">"conditions"</span>: <span class="o">{</span>
+        <span class="s2">"0"</span>: <span class="o">[</span>
+          <span class="o">{}</span>
+        <span class="o">]</span>
+      <span class="o">}</span>,
+      <span class="s2">"items"</span>: <span class="o">[</span>
+        0
+      <span class="o">]</span>,
+      <span class="s2">"m"</span>: 2,
+      <span class="s2">"n"</span>: 3,
+      <span class="s2">"sorted"</span>: <span class="nb">false</span>,
+      <span class="s2">"type"</span>: <span class="s2">"PARTIAL"</span>
+    <span class="o">}</span>,
+    <span class="s2">"id"</span>: <span class="s2">"seaxtqqn"</span>,
+    <span class="s2">"keys"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"fingerprint"</span>: <span class="s2">"7cdf2d46"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"fingerprint"</span>: <span class="s2">"fc7870cd"</span>
+      <span class="o">}</span>,
+      <span class="o">{</span>
+        <span class="s2">"fingerprint"</span>: <span class="s2">"26b03333"</span>
+      <span class="o">}</span>
+    <span class="o">]</span>,
+    <span class="s2">"satisfaction"</span>: <span class="o">{</span>
+      <span class="s2">"items"</span>: <span class="o">[]</span>,
+      <span class="s2">"m"</span>: 2,
+      <span class="s2">"n"</span>: 3,
+      <span class="s2">"sorted"</span>: <span class="nb">false</span>,
+      <span class="s2">"type"</span>: <span class="s2">"PARTIAL"</span>
+    <span class="o">}</span>,
+    <span class="s2">"threshold"</span>: 2,
+    <span class="s2">"type"</span>: <span class="s2">"MULTISIG"</span>
+  <span class="o">}</span>,
+  <span class="s2">"internal"</span>: null
+<span class="o">}</span>
+
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### SpendingPolicyRequired for complex descriptors 
+
+--external_policy "{\"seaxtqqn\": [0,1]}"
+     &lt;-rootnode-&gt;&lt;children #0 and #1 of root node&gt;
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>Save the “id”: We will need to use this ‘‘id’’ later.</p>
+</blockquote>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />More info on external here 
+<a href="https://bitcoindevkit.org/bdk-cli/interface/">create_tx &gt; external policies</a></li>
+</ul>
+
+<hr />
+<h2 id="step-10-create-a-transaction-psbt">Step 10: Create a Transaction (PSBT)</h2>
+<ul>
+  <li>1st Create a PSBT using the first wallet</li>
+  <li>2nd Sign the PSBT with the first wallet</li>
+  <li>3rd  Sign PSBT with the second wallet</li>
+  <li>Broadcast PSBT</li>
+</ul>
+
+<h3 id="export-unsigned_psbt-to-environment-variable">Export UNSIGNED_PSBT to environment variable</h3>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')</code></p>
+
+<h3 id="verify-unsigned_psbt--environment-variable">Verify UNSIGNED_PSBT  environment variable</h3>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">env | grep UNSIGNED</code>
+<img src="https://i.imgur.com/djHaRDq.gif" alt="" /></p>
+
+<hr />
+<h2 id="step-11-sign-the-transaction">Step 11: SIGN the Transaction</h2>
+
+<h3 id="1st-wallet-signs-the-transaction">1st Wallet Signs the transaction</h3>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r '.psbt')</code></p>
+
+<p>:arrow_forward:<code class="language-plaintext highlighter-rouge">env | grep ONESIG</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "is_finalized": false,
+  "psbt": "cHNidP8BAFUBAAAAAdYCtva/7Rkt+fgFu3mxAdaPh4uTbgBL3HmYZgcEKWygAAAAAAD/////AQqGAQAAAAAAGXapFDRKD0jKFQ7CuQOBdmC5tosTpnAmiKwAAAAAAAEA6gIAAAAAAQFLyGFJFK884DGBM1WgskRZ6gKp/7oZ+Z30u0+wF3pZYAEAAAAA/v///wKghgEAAAAAACIAINHcOQLE6GpJ3J+FOzn/be+HApxW8sZtGqfA3TBW+NYX91hoOAAAAAAWABTPQDZx2wYYIn+ug2pZBmWBn0Tu/gJHMEQCIHu6GmRMDgPZyTx+klFMA9VujR3qDA/Y08kSkRvOaChjAiBAtExtGAYLuQ/DDJzCqLlNZ1bMB3MV+nxsLfTdI9YcYwEhA0b8lz+kt0xHfR/tjUKOc2Nt2L61pDd5vJ/lsKi8pw9MmFUjAAEBK6CGAQAAAAAAIgAg0dw5AsToakncn4U7Of9t74cCnFbyxm0ap8DdMFb41hciAgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDUgwRQIhAJdILr7G3UzYylyr2fA13MFsz/jG4+iZlKeEkX79d082AiA99UF0/uFyXBVNUmuGaxdHL7wlhzqfbgGLMREN0z/O6QEBBWlSIQIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDSEDzsDXexRPSxeXiLJoS0i2fQlOoOGHmo+Dhaeaq3oHV6YhAjGKA2Dqg+QeMICBAifYslQF2WrehLEQ0iEOpp/+eQ0NU64iBgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDRh83y1GVAAAgAEAAIAAAACAAAAAAAAAAAAiBgIxigNg6oPkHjCAgQIn2LJUBdlq3oSxENIhDqaf/nkNDRgmsDMzVAAAgAEAAIAAAACAAAAAAAAAAAAiBgPOwNd7FE9LF5eIsmhLSLZ9CU6g4Yeaj4OFp5qregdXphj8eHDNVAAAgAEAAIAAAACAAAAAAAAAAAAAAA=="
+}
+
+
+</code></pre></div></div>
+
+<p><img src="https://i.imgur.com/0w4sK5y.gif" alt="" /></p>
+
+<hr />
+<h3 id="2nd-wallet-signs-the-transaction">2nd Wallet Signs the transaction</h3>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT</code></p>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r '.psbt')</code></p>
+
+<p>:arrow_forward:<code class="language-plaintext highlighter-rouge">env | grep SECONDSIG</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "is_finalized": true,
+  "psbt": "cHNidP8BAFUBAAAAAdYCtva/7Rkt+fgFu3mxAdaPh4uTbgBL3HmYZgcEKWygAAAAAAD/////AQqGAQAAAAAAGXapFDRKD0jKFQ7CuQOBdmC5tosTpnAmiKwAAAAAAAEA6gIAAAAAAQFLyGFJFK884DGBM1WgskRZ6gKp/7oZ+Z30u0+wF3pZYAEAAAAA/v///wKghgEAAAAAACIAINHcOQLE6GpJ3J+FOzn/be+HApxW8sZtGqfA3TBW+NYX91hoOAAAAAAWABTPQDZx2wYYIn+ug2pZBmWBn0Tu/gJHMEQCIHu6GmRMDgPZyTx+klFMA9VujR3qDA/Y08kSkRvOaChjAiBAtExtGAYLuQ/DDJzCqLlNZ1bMB3MV+nxsLfTdI9YcYwEhA0b8lz+kt0xHfR/tjUKOc2Nt2L61pDd5vJ/lsKi8pw9MmFUjAAEBK6CGAQAAAAAAIgAg0dw5AsToakncn4U7Of9t74cCnFbyxm0ap8DdMFb41hciAgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDUgwRQIhAJdILr7G3UzYylyr2fA13MFsz/jG4+iZlKeEkX79d082AiA99UF0/uFyXBVNUmuGaxdHL7wlhzqfbgGLMREN0z/O6QEiAgPOwNd7FE9LF5eIsmhLSLZ9CU6g4Yeaj4OFp5qregdXpkgwRQIhAO2aRERcublhAzToshkZRMg2I8GaE7mM2ECr0vYyuscmAiB5KK4ETlvrLqL0QbcRbGqrSwIa9lVuOqP3f5qCnGRMaQEBBWlSIQIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDSEDzsDXexRPSxeXiLJoS0i2fQlOoOGHmo+Dhaeaq3oHV6YhAjGKA2Dqg+QeMICBAifYslQF2WrehLEQ0iEOpp/+eQ0NU64iBgIjUCIdnyr6rDtuNhVNt4ZBDcvYLawfoJbzbPyxc/WNDRh83y1GVAAAgAEAAIAAAACAAAAAAAAAAAAiBgIxigNg6oPkHjCAgQIn2LJUBdlq3oSxENIhDqaf/nkNDRgmsDMzVAAAgAEAAIAAAACAAAAAAAAAAAAiBgPOwNd7FE9LF5eIsmhLSLZ9CU6g4Yeaj4OFp5qregdXphj8eHDNVAAAgAEAAIAAAACAAAAAAAAAAAABBwABCP3+AAQASDBFAiEAl0guvsbdTNjKXKvZ8DXcwWzP+Mbj6JmUp4SRfv13TzYCID31QXT+4XJcFU1Sa4ZrF0cvvCWHOp9uAYsxEQ3TP87pAUgwRQIhAO2aRERcublhAzToshkZRMg2I8GaE7mM2ECr0vYyuscmAiB5KK4ETlvrLqL0QbcRbGqrSwIa9lVuOqP3f5qCnGRMaQFpUiECI1AiHZ8q+qw7bjYVTbeGQQ3L2C2sH6CW82z8sXP1jQ0hA87A13sUT0sXl4iyaEtItn0JTqDhh5qPg4Wnmqt6B1emIQIxigNg6oPkHjCAgQIn2LJUBdlq3oSxENIhDqaf/nkNDVOuAAA="
+}
+
+
+</code></pre></div></div>
+
+<p><img src="https://i.imgur.com/OdLHnJ3.gif" alt="" /></p>
+
+<hr />
+<h2 id="step-12-broadcast-transaction">Step 12: Broadcast Transaction</h2>
+
+<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "txid": "61da2451874a483aa8d1d0787c7680d157639f284840de8885098cac43f6cc2f"
+}
+
+
+</code></pre></div></div>
+
+<p><img src="https://i.imgur.com/M7s0Fd6.gif" alt="" /></p>
+
+<h3 id="verify-transaction">Verify Transaction</h3>
+
+<ul>
+  <li>Verify transcation in the memory pool on testnet <a href="https://mempool.space/testnet">Mempool-testnet!</a></li>
+</ul>
+
+
+</div>
+<div class="tags-container">
+	
+		<a href="http://localhost:4000/tags/#bdk" class="post-tag">bdk</a>, 
+	
+		<a href="http://localhost:4000/tags/#bdk-cli" class="post-tag">bdk-cli</a>, 
+	
+		<a href="http://localhost:4000/tags/#tutorial" class="post-tag">tutorial</a>, 
+	
+		<a href="http://localhost:4000/tags/#multi-sig" class="post-tag">multi-sig</a>
+	
+</div>
+<div class="navigation">
+	
+		<a class="prev" href="/bdk-cli-basics/">< Bitcoin Dev Kit bdk-cli-basics Single-Signature 00</a>
+	 
+</div>
+
+	<section class="comment-area w-100">
+		<div class="comment-wrapper">
+			<div id="disqus_thread" class="article-comments"></div>
+			<script>
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//XXX.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
+
+	<div class="footer">
+		<span>  Bitcoin is a Truth Function <b>OPEN SOURCE</b><b> John 1:1 </b></a></span>
+	</div>
+</div>
+	<script src="assets/js/ephesus.js"></script>
+	<script type="text/javascript">
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			document.getElementById('mode-switcher').classList.add('active');
+		}
+	</script>
+
+	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-00"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-XXXXXXXX-00');
+    </script>
+	
+</body>
+</html>
