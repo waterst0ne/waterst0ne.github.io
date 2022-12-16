@@ -21,6 +21,9 @@ tags: [bdk, bdk-cli,tutorial]
 ***
 
 ## A few things before you begin:
+> Run this command to clear cache.
+> This command is not needed if it's your first time of using the `bdk-cli.`
+> This command clears the cache files located in the bdk-cli folder. `rm -rf ~/.bdk-cli/`
 
 - Three things to look out for in each step of the tutorial:
     - 1) Commands for the Terminal or Shell start with the `$` symbol
@@ -55,7 +58,7 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ### `bdk-cli` installation:
 
 ```
-$ cargo install --version 0.6.0 bdk-cli
+$  cargo install --features electrum  --version 0.6.0 bdk-cli
 ```
 
 ## Step 0: Check Version of bdk-cli
@@ -178,6 +181,20 @@ $ `bdk-cli wallet --wallet wallet_name --descriptor $my_descriptor get_new_addre
   "address": "tb1qrh4sq5va0unqtxyfv8al9lz3sna3988cj59uya"
 }
 ```
+
+Note: If you get the error below just delete the folder cache.
+
+`$ rm -rf ~/./bdk_cli/`
+```
+### ERROR PREVIEW 
+
+[2022-12-16T04:12:26Z ERROR bdk_cli] Descriptor checksum mismatch. Are you using a different descriptor for an already defined wallet name? (if you are not specifying the wallet name it is automatically named based on the descriptor)
+
+
+```
+
+This erases the cache files located in the bdk-cli binary folder.
+Note: This happens when you name the wallet the same name as previous created wallet. 
 
 ***
 ## Step 3: Send testnet bitcoin to the newly created receive-address 

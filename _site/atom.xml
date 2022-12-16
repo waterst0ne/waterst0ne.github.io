@@ -4,7 +4,7 @@
  <title>waterStone blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-12-15T04:51:03+03:00</updated>
+ <updated>2022-12-16T08:50:40+03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>waterStone</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Bitcoin developer journey</title>
+   <title>Bitcoin Developer Journey</title>
    <link href="http://localhost:4000/bitcoin-dev-journey-22/"/>
    <updated>2022-12-13T03:00:00+03:00</updated>
    <id>http://localhost:4000/bitcoin-dev-journey</id>
@@ -47,7 +47,7 @@
 &lt;p&gt;A month later, I received a message from BDK for the Summer of Bitcoin internship. I could not believe my eyes; I was accepted to intern and be a part of Summer of Bitcoin `22. I had month before the internship started, I continued learn the tools I needed to be as prepared as possibly for the internship. I continued to work every day and learn more about BDK, this was my chance to learn and contribute. I don’t think I ever took a day off; every day is a chance to become better and more efficient. You receive, what you put into anything, you reap what you sow,  ran through my head.  You can read more about my Summer of Bitcoin experience here.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/sob-22-experience-bdk/&quot;&gt;“My Summer of Bitcoin experience with BDK”&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;https://www.summerofbitcoin.org/bit&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -59,22 +59,29 @@
 
 &lt;h3 id=&quot;tabconf-22&quot;&gt;TabConf ‘22&lt;/h3&gt;
 &lt;p&gt;Tabconf is the best Bitcoin conference for developers, and aspiring contributors, or anyone who wants to get involved in the Bitcoin space. I had zero plans to assist Tabconf `22, but as event was approaching I came across a Bitcoin podcast named “Building Builders”. It’s hosted by Rod @bitkite with guest speaker Stephen from Bitcoin Design, he happened to be talking about TabConf ‘22. After listening to the podcast, I was convinced I had to attend TabConf.  The first day of Tabconf was named “Builder day”,a day for open-source Bitcoin projects to onboard and demo their projects to individuals that want to learn how to contribute to Bitcoin OSS. On builder day, I had the opportunity to help at the Bitcoin Dev Kit table. I assisted guests with BDK questions and troubleshoot when requested. Day 2 was filled with developer focused workshops. I met so many talented and inspiring Bitcoiners at the conference, being there makes you realize how important Bitcoin is to many individuals around the globe.  Tabconf is a great place to be at if you want to learn more technical details, attend workshops, and network with some of the brightest minds in the Bitcoin space.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://2023.tabconf.com/&quot;&gt;TABCONF `23&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;bitdevs-atlanta-and-terminus-electric-money-lab&quot;&gt;BitDevs Atlanta and Terminus Electric Money Lab&lt;/h3&gt;
 &lt;p&gt;Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
 Please make sure to pay them a visit in your  sats-mobile if you happen to be in Atlanta.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Generation Bitcoin&lt;/li&gt;
-  &lt;li&gt;BitDevs ATL&lt;/li&gt;
-  &lt;li&gt;Terminus Electric Money Lab&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://genbitcoin.org/&quot;&gt;Generation Bitcoin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://atlantabitdevs.org/&quot;&gt;BitDevs ATL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://terminus.money/&quot;&gt;Terminus Electric Money Lab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;pacific-bitcoin-22&quot;&gt;Pacific Bitcoin ‘22&lt;/h3&gt;
-&lt;p&gt;This year, I also had the opportunity to attend Pacific Bitcoin ‘22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the change to  listen to many Bitcoiners perspectives, their ambitions, and their goals. What bear market ? Bitcoiners are still building. 😊&lt;/p&gt;
+&lt;p&gt;This year, I also had the opportunity to attend Pacific Bitcoin ‘22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the chance to listen to many Bitcoiners perspectives, their ambitions, and their goals. What do you mean a bear market ? Bitcoiners are still building. 😊&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h2 id=&quot;pacific-bitcoin-23&quot;&gt;&lt;a href=&quot;https://www.pacificbitcoin.com/&quot;&gt;Pacific Bitcoin ‘23&lt;/a&gt;&lt;/h2&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;end-of-the-year-reflections&quot;&gt;End of the Year Reflections&lt;/h3&gt;
 
@@ -82,8 +89,9 @@ Please make sure to pay them a visit in your  sats-mobile if you happen to be in
 Until next time. 
 Stay humble and stack Sats!&lt;/p&gt;
 
-&lt;p&gt;Bitcoin Open Source Projects and Communities&lt;br /&gt;
-&lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit&lt;/a&gt;
+&lt;p&gt;Bitcoin Open Source Projects and Communities&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit&lt;/a&gt;
 &lt;a href=&quot;https://lightningdevkit.org/&quot;&gt;Lightning Dev Kit&lt;/a&gt;
 &lt;a href=&quot;https://bitcoin.design/&quot;&gt;Bitcoin Design&lt;/a&gt;
 &lt;a href=&quot;https://www.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin&lt;/a&gt;&lt;/p&gt;
@@ -112,6 +120,11 @@ Stay humble and stack Sats!&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;a-few-things-before-you-begin&quot;&gt;A few things before you begin:&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Run this command to clear cache.
+This command is not needed if it’s your first time of using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli.&lt;/code&gt;
+This command clears the cache files located in the bdk-cli folder. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rm -rf ~/.bdk-cli/&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Three things to look out for in each step of the tutorial:
@@ -153,7 +166,7 @@ Stay humble and stack Sats!&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3 id=&quot;bdk-cli-installation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli&lt;/code&gt; installation:&lt;/h3&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cargo install --version 0.6.0 bdk-cli
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$  cargo install --features electrum  --version 0.6.0 bdk-cli
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;step-0-check-version-of-bdk-cli&quot;&gt;Step 0: Check Version of bdk-cli&lt;/h2&gt;
@@ -258,6 +271,19 @@ SUBCOMMANDS:
   &quot;address&quot;: &quot;tb1qrh4sq5va0unqtxyfv8al9lz3sna3988cj59uya&quot;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note: If you get the error below just delete the folder cache.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ rm -rf ~/./bdk_cli/&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;### ERROR PREVIEW 
+
+[2022-12-16T04:12:26Z ERROR bdk_cli] Descriptor checksum mismatch. Are you using a different descriptor for an already defined wallet name? (if you are not specifying the wallet name it is automatically named based on the descriptor)
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This erases the cache files located in the bdk-cli binary folder.
+Note: This happens when you name the wallet the same name as previous created wallet.&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;h2 id=&quot;step-3-send-testnet-bitcoin-to-the-newly-created-receive-address&quot;&gt;Step 3: Send testnet bitcoin to the newly created receive-address&lt;/h2&gt;

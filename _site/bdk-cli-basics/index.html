@@ -84,6 +84,11 @@
 </ul>
 
 <h2 id="a-few-things-before-you-begin">A few things before you begin:</h2>
+<blockquote>
+  <p>Run this command to clear cache.
+This command is not needed if it’s your first time of using the <code class="language-plaintext highlighter-rouge">bdk-cli.</code>
+This command clears the cache files located in the bdk-cli folder. <code class="language-plaintext highlighter-rouge">rm -rf ~/.bdk-cli/</code></p>
+</blockquote>
 
 <ul>
   <li>Three things to look out for in each step of the tutorial:
@@ -125,7 +130,7 @@
 <hr />
 <h3 id="bdk-cli-installation"><code class="language-plaintext highlighter-rouge">bdk-cli</code> installation:</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cargo install --version 0.6.0 bdk-cli
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$  cargo install --features electrum  --version 0.6.0 bdk-cli
 </code></pre></div></div>
 
 <h2 id="step-0-check-version-of-bdk-cli">Step 0: Check Version of bdk-cli</h2>
@@ -230,6 +235,19 @@ SUBCOMMANDS:
   "address": "tb1qrh4sq5va0unqtxyfv8al9lz3sna3988cj59uya"
 }
 </code></pre></div></div>
+
+<p>Note: If you get the error below just delete the folder cache.</p>
+
+<p><code class="language-plaintext highlighter-rouge">$ rm -rf ~/./bdk_cli/</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### ERROR PREVIEW 
+
+[2022-12-16T04:12:26Z ERROR bdk_cli] Descriptor checksum mismatch. Are you using a different descriptor for an already defined wallet name? (if you are not specifying the wallet name it is automatically named based on the descriptor)
+
+
+</code></pre></div></div>
+
+<p>This erases the cache files located in the bdk-cli binary folder.
+Note: This happens when you name the wallet the same name as previous created wallet.</p>
 
 <hr />
 <h2 id="step-3-send-testnet-bitcoin-to-the-newly-created-receive-address">Step 3: Send testnet bitcoin to the newly created receive-address</h2>
@@ -392,7 +410,7 @@ SUBCOMMANDS:
 </div>
 <div class="navigation">
 	 
-	<a class="next" href="/bitcoin-dev-journey-22/">Bitcoin developer journey ></a>
+	<a class="next" href="/bitcoin-dev-journey-22/">Bitcoin Developer Journey ></a>
 
 </div>
 

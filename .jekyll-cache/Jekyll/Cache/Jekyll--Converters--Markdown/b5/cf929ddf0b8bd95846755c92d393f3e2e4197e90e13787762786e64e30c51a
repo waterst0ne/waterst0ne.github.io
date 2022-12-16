@@ -1,4 +1,4 @@
-I"$<h1 id="my-journey-into-bitcoin-development">My Journey into Bitcoin Development</h1>
+I"�%<h1 id="my-journey-into-bitcoin-development">My Journey into Bitcoin Development</h1>
 
 <h3 id="who-am-i-">Who am I ?</h3>
 
@@ -28,26 +28,41 @@
 <p>A month later, I received a message from BDK for the Summer of Bitcoin internship. I could not believe my eyes; I was accepted to intern and be a part of Summer of Bitcoin `22. I had month before the internship started, I continued learn the tools I needed to be as prepared as possibly for the internship. I continued to work every day and learn more about BDK, this was my chance to learn and contribute. I don’t think I ever took a day off; every day is a chance to become better and more efficient. You receive, what you put into anything, you reap what you sow,  ran through my head.  You can read more about my Summer of Bitcoin experience here.</p>
 <ul>
   <li><a href="https://blog.summerofbitcoin.org/sob-22-experience-bdk/">“My Summer of Bitcoin experience with BDK”</a></li>
-  <li>https://www.summerofbitcoin.org/bit</li>
+  <li><a href="https://www.summerofbitcoin.org/">Summer of Bitcoin</a></li>
 </ul>
+
+<hr />
 
 <h3 id="mini-grant-recipient">Mini-grant recipient</h3>
 <p>After Summer of Bitcoin had finished, I didn’t want to stop contributing to BDK, so I continued to work on it as much time as I could.  At the time, I was working on weekends delivering for a local pizza shop. I noticed a Superlunar mini-grant post on twitter for developers. I decided to apply and was fortunate enough to receive a mini-grant to work on BDK. This allowed me to quit my weekend job, continue my journey as an entry developer for BDK, and continue to focus on school also. My latest contribution was an appendix entry for the Mastering Bitcoin Book on BDK features and a few examples of how to use the bdk-cli app for quick testing and demonstration using Bitcoin features.</p>
 
+<hr />
+
 <h3 id="tabconf-22">TabConf ‘22</h3>
 <p>Tabconf is the best Bitcoin conference for developers, and aspiring contributors, or anyone who wants to get involved in the Bitcoin space. I had zero plans to assist Tabconf `22, but as event was approaching I came across a Bitcoin podcast named “Building Builders”. It’s hosted by Rod @bitkite with guest speaker Stephen from Bitcoin Design, he happened to be talking about TabConf ‘22. After listening to the podcast, I was convinced I had to attend TabConf.  The first day of Tabconf was named “Builder day”,a day for open-source Bitcoin projects to onboard and demo their projects to individuals that want to learn how to contribute to Bitcoin OSS. On builder day, I had the opportunity to help at the Bitcoin Dev Kit table. I assisted guests with BDK questions and troubleshoot when requested. Day 2 was filled with developer focused workshops. I met so many talented and inspiring Bitcoiners at the conference, being there makes you realize how important Bitcoin is to many individuals around the globe.  Tabconf is a great place to be at if you want to learn more technical details, attend workshops, and network with some of the brightest minds in the Bitcoin space.</p>
+<ul>
+  <li><a href="https://2023.tabconf.com/">TABCONF `23</a></li>
+</ul>
 
 <h3 id="bitdevs-atlanta-and-terminus-electric-money-lab">BitDevs Atlanta and Terminus Electric Money Lab</h3>
 <p>Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
 Please make sure to pay them a visit in your  sats-mobile if you happen to be in Atlanta.</p>
 <ul>
-  <li>Generation Bitcoin</li>
-  <li>BitDevs ATL</li>
-  <li>Terminus Electric Money Lab</li>
+  <li><a href="https://genbitcoin.org/">Generation Bitcoin</a></li>
+  <li><a href="https://atlantabitdevs.org/">BitDevs ATL</a></li>
+  <li><a href="https://terminus.money/">Terminus Electric Money Lab</a></li>
 </ul>
 
+<hr />
+
 <h3 id="pacific-bitcoin-22">Pacific Bitcoin ‘22</h3>
-<p>This year, I also had the opportunity to attend Pacific Bitcoin ‘22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the change to  listen to many Bitcoiners perspectives, their ambitions, and their goals. What bear market ? Bitcoiners are still building. 😊</p>
+<p>This year, I also had the opportunity to attend Pacific Bitcoin ‘22 and let me tell you it was pure signal. Everyone I met there was working on Bitcoin, an educator, or was passionate  HODL’r and Bitcoin advocate. I was lucky  to meet a few of the Swan Team Bitcoiners who work in different areas in the Bitcoin space. It was my first time meeting the Swan Team and I can tell they are like a Bitcoin family. PB ’22 was a great experience, I had the chance to listen to many Bitcoiners perspectives, their ambitions, and their goals. What do you mean a bear market ? Bitcoiners are still building. 😊</p>
+
+<ul>
+  <li>
+    <h2 id="pacific-bitcoin-23"><a href="https://www.pacificbitcoin.com/">Pacific Bitcoin ‘23</a></h2>
+  </li>
+</ul>
 
 <h3 id="end-of-the-year-reflections">End of the Year Reflections</h3>
 
@@ -55,8 +70,9 @@ Please make sure to pay them a visit in your  sats-mobile if you happen to be in
 Until next time. 
 Stay humble and stack Sats!</p>
 
-<p>Bitcoin Open Source Projects and Communities<br />
-<a href="https://bitcoindevkit.org/">Bitcoin Dev Kit</a>
+<p>Bitcoin Open Source Projects and Communities</p>
+
+<p><a href="https://bitcoindevkit.org/">Bitcoin Dev Kit</a>
 <a href="https://lightningdevkit.org/">Lightning Dev Kit</a>
 <a href="https://bitcoin.design/">Bitcoin Design</a>
 <a href="https://www.summerofbitcoin.org/">Summer of Bitcoin</a></p>
