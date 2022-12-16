@@ -1,0 +1,60 @@
+I"ü<p>This covers a list of resources and examples to begin using the <a href="https://bitcoindevkit.org/">Bitcoin Dev Kit library</a>. Perfect for beginner/intermediate developers who want to learn the basics through BDK examples. Whether you are looking to contribute, develop, or create your own bitcoin application, this post should cover most of the fundamental information needed to get you started. This is a work in progress but should suffice for anyone looking to start learning today.</p>
+
+<p>What should you expect to get from this guide:</p>
+<ul>
+  <li>Be exposed to BDK features and library.</li>
+  <li>Hands-on tutorials in order to learn by doing.</li>
+</ul>
+
+<p>Goals:</p>
+<ul>
+  <li>Hopefully this content is enough to onboard new developers, contributors, and projects.</li>
+  <li>You will be able to reproduce these to create your own custom Bitcoin wallet or app.</li>
+  <li>Supported languages: Rust, Java/Kotlin, Swift, Python and React Native.</li>
+</ul>
+
+<p>Lets get started :</p>
+
+<p>Easy / Intermediate Tutorials:</p>
+
+<ul>
+  <li><a href="https://waterst0ne.github.io/bdk-cli-basics/">BDK-CLI Basics: Single-Sig Testnet transaction</a></li>
+  <li><a href="https://waterst0ne.github.io/bdk-cli-basics-multisig/">BDK-CLI Basics: 2-of-3 Multi-Sig Testnet Transaction</a></li>
+  <li><a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/appdx-bitcoindevkit.asciidoc">Mastering Bitcoin Book : Bitcoin Dev Kit and BDK-CLI( 3 Wallet Examples)</a></li>
+</ul>
+
+<p>This tutorial comes with a video also.</p>
+<ul>
+  <li><a href="https://bitcoindevkit.org/tutorials/spending_policy_demo/">BDK-CLI MiniScript Policy Decoded: : 3-of-3 multi-sig or 2-of-3 and relative-timelock</a>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=-Q8OD8NCEe4&amp;t=2s">Bitcoin Developers : Learning BDK from the Command line (Youtube Video)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Advanced Tutorials:</p>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk">Github Rust Examples</a></li>
+  <li><a href="https://docs.rs/bdk/latest/bdk/">Rust Documents</a></li>
+  <li><a href="https://bitcoindevkit.org/blog/2020/12/hello-world/">BDK Hello World Tutorial</a></li>
+  <li><a href="https://bitcoindevkit.org/tutorials/hidden-power-of-bitcoin/">Hidden Powers of Miniscript Poly &amp; Descriptors</a></li>
+</ul>
+
+<p>How to Contribute:</p>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk-cli/blob/master/CONTRIBUTING.md">Contributing to BDK</a></li>
+  <li><a href="https://github.com/jonatack/bitcoin-development/blob/master/how-to-review-bitcoin-core-prs.md">Jon Atack: How to Review Bitcoin Core PRs</a></li>
+  <li><a href="https://danielabrozzoni.com/posts/contributing_to_oss/">Daniela Brozzoni: Contributing to Bitcoin - tips and tricks</a></li>
+</ul>
+
+<p>Other BDK GIT Libraries:</p>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk-ffi">BDK-FFI</a></li>
+  <li><a href="https://github.com/bitcoindevkit/bdk-cli">BDK-CLI</a></li>
+</ul>
+
+<h2 id="how-to-contribute-to-oss-blogs">How to contribute to OSS Blogs:</h2>
+<ul>
+  <li></li>
+</ul>
+:ET

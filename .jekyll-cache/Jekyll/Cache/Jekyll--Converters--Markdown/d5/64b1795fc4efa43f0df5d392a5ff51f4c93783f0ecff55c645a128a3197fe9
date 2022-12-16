@@ -1,4 +1,4 @@
-I"G<<h2 id="how-to-use-bdk-cli-basics">How to use bdk-cli basics</h2>
+I"R<<h2 id="how-to-use-bdk-cli-basics">How to use bdk-cli basics</h2>
 <h3 id="tutorial-goals">Tutorial Goals</h3>
 
 <ul>
@@ -60,7 +60,7 @@ This command clears the cache files located in the bdk-cli folder. <code class="
 <hr />
 <h3 id="bdk-cli-installation"><code class="language-plaintext highlighter-rouge">bdk-cli</code> installation:</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$  cargo install --features electrum  --version 0.6.0 bdk-cli
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$  cargo install --features "electrum,compiler"  --version 0.6.0 bdk-cli
 </code></pre></div></div>
 
 <h2 id="step-0-check-version-of-bdk-cli">Step 0: Check Version of bdk-cli</h2>

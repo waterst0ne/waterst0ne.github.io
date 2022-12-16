@@ -259,7 +259,7 @@ $` bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 p
 
 
 
-### Export UNSIGNED_PSBT to environment variable
+### Create TXN and Export UNSIGNED_PSBT to environment variable
 
 $ `export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')`
 

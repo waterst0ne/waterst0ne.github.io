@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>BDK: bdk-cli-basics 2-of-3 Multi-Signature - waterStone blog</title>
+		<title>BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial) - waterStone blog</title>
 		<meta name="description" content="waterStone blog">
 		<meta name="keywords" content="bdkbdk-clitutorialmulti-sig">
 		<base href="http://localhost:4000" />
@@ -15,11 +15,11 @@
 		<meta property="og:site_name" content="waterStone blog">
 		<meta property="og:type" content="article" />
 		<meta property="og:url" content="http://localhost:4000/bdk-cli-basics-multisig/"/>
-		<meta property="og:title" content="BDK: bdk-cli-basics 2-of-3 Multi-Signature - waterStone blog" />
+		<meta property="og:title" content="BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial) - waterStone blog" />
 		<meta property="og:description" content="waterStone blog" />
 		<meta property="og:image" content="http://localhost:4000/assets/images/favicon.png"/>
 		<meta name="twitter:card" content="summary"/>
-		<meta property="twitter:title" content="BDK: bdk-cli-basics 2-of-3 Multi-Signature - waterStone blog" />
+		<meta property="twitter:title" content="BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial) - waterStone blog" />
 		<meta property="twitter:description" content="waterStone blog" />
 		<meta property="twitter:image" content="http://localhost:4000/assets/images/favicon.png" />
 		<link rel="stylesheet" href="assets/css/highlight.css">
@@ -61,13 +61,13 @@
 	<div class="post-share">
 		Share:&nbsp; 
 		<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
-		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=http://localhost:4000/bdk-cli-basics -multiSig&amp;text=BDK: bdk-cli-basics 2-of-3 Multi-Signature - http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=http://localhost:4000/bdk-cli-basics -multiSig&amp;text=BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial) - http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
 		<a href="https://api.whatsapp.com/send?text=http://localhost:4000/bdk-cli-basics -multiSig" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
 	</div>
 </div>
 
 <div class="blog-post-content">
-	<h1>BDK: bdk-cli-basics 2-of-3 Multi-Signature</h1>
+	<h1>BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial)</h1>
 	<h2 id="bitcoin-dev-kit--2-of-3-multi-signature-descriptor-wallet-using-bdk-using-command-line">Bitcoin Dev Kit  2-of-3 Multi-Signature Descriptor Wallet using BDK using Command-Line</h2>
 
 <h2 id="overview-of-the-tutorial">Overview of the tutorial</h2>
@@ -77,43 +77,57 @@
   <li>Intro to more complex but standard policies to create custom encumberances aka custom spending conditions for transactions.</li>
 </ul>
 
+<hr />
+<h3 id="rust-and-cargo-installation">Rust and Cargo installation:```</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre></div></div>
+
+<hr />
+<h3 id="bdk-cli-installation"><code class="language-plaintext highlighter-rouge">bdk-cli</code> installation:</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$  cargo install --features "electrum,compiler"  --version 0.6.0 bdk-cli
+</code></pre></div></div>
+
+<hr />
+
 <h2 id="step-1-generate-the-xprvs-extended-keys-and-save-to-environment-variables">Step 1: Generate the XPRVs (Extended-Keys) and Save to environment variables</h2>
 
 <blockquote>
   <p>Create three private keys and each in their own environment variable</p>
 </blockquote>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPRV_00=$(bdk-cli key generate | jq -r '.xprv')</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export XPRV_00=$(bdk-cli key generate | jq -r '.xprv')</code></p>
 
-<p>:arrow_forward:   <code class="language-plaintext highlighter-rouge">export XPRV_01=$(bdk-cli key generate | jq -r '.xprv')</code></p>
+<p>$   <code class="language-plaintext highlighter-rouge">export XPRV_01=$(bdk-cli key generate | jq -r '.xprv')</code></p>
 
-<p>:arrow_forward:   <code class="language-plaintext highlighter-rouge">export XPRV_02=$(bdk-cli key generate | jq -r '.xprv')</code></p>
+<p>$   <code class="language-plaintext highlighter-rouge">export XPRV_02=$(bdk-cli key generate | jq -r '.xprv')</code></p>
 
 <p><img src="https://i.imgur.com/FwgUdwK.gif" alt="" /></p>
 
 <h3 id="1a-verify-xprv-environment-variables-are-active">1a: Verify XPRV environment variables are Active</h3>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">env | grep XPRV</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">env | grep XPRV</code></p>
 
 <p><img src="https://i.imgur.com/ZerGPbO.gif" alt="" /></p>
 
+<hr />
 <h2 id="step-2-generate-xpubs-extended-public-keys--save-to-environment-variables">Step 2: Generate XPUBs (Extended Public Keys) &amp; Save to environment variables</h2>
 
 <blockquote>
   <p>Generate the three individual Public Keys aka XPUBs using our Private key and descriptor path.</p>
 </blockquote>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path "m/84'/1'/0'/0" | jq -r ".xpub")</code></p>
 
 <p><img src="https://i.imgur.com/xT3KRh4.gif" alt="" /></p>
 
 <h3 id="2a-verify-xpub-environment-variables">2a: Verify XPUB environment variables</h3>
 
-<p>:arrow_forward:    <code class="language-plaintext highlighter-rouge">env | grep XPUB</code></p>
+<p>$    <code class="language-plaintext highlighter-rouge">env | grep XPUB</code></p>
 
 <p><img src="https://i.imgur.com/SzAip9E.gif" alt="" /></p>
 
@@ -124,14 +138,15 @@
   <p>Create the wallet Descriptor for each wallet</p>
 </blockquote>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_00="$XPRV_00/84h/1h/0h/0/*"</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_00="$XPRV_00/84h/1h/0h/0/*"</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_01="$XPRV_01/84h/1h/0h/0/*"</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_01="$XPRV_01/84h/1h/0h/0/*"</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export DESCRIPTOR_02="$XPRV_02/84h/1h/0h/0/*"</code></p>
 
 <p><img src="https://i.imgur.com/mFrWt6b.png" alt="" /></p>
 
+<hr />
 <h2 id="step-4-create-multi-sig-descriptor-wallets">Step 4: Create Multi-Sig-Descriptor Wallets</h2>
 
 <blockquote>
@@ -142,22 +157,22 @@
   <li>When creating the descriptor the order matters so be aware of that when following tutorial if you are for any reason changing the order of the policy.
     <h4 id="multi-sig-wallet-0">Multi-Sig-Wallet 0</h4>
   </li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />:arrow_forward: <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_00=$(bdk-cli compile "thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))" | jq -r '.descriptor')</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />$ <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_00=$(bdk-cli compile "thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))" | jq -r '.descriptor')</code></li>
 </ul>
 
 <h4 id="multi-sig-wallet-1">Multi-Sig-Wallet 1</h4>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />:arrow_forward: <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_01=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))" | jq -r '.descriptor')</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />$ <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_01=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))" | jq -r '.descriptor')</code></li>
 </ul>
 
 <h4 id="multi-sig-wallet-2">Multi-Sig-Wallet 2</h4>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />:arrow_forward:  <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_02=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))" | jq -r '.descriptor')</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />$  <code class="language-plaintext highlighter-rouge">export MULTI_DESCRIPTOR_02=$(bdk-cli compile "thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))" | jq -r '.descriptor')</code></li>
 </ul>
 
 <p><img src="https://i.imgur.com/Yb8RmFS.gif" alt="" /></p>
 
-<p>:::spoiler Click to show details : What is <strong>Miniscript?</strong> + Resources</p>
+<p>What is <strong>Miniscript?</strong> + Resources</p>
 
 <p>More details  <strong>Miniscript</strong>, Policy:</p>
 
@@ -165,7 +180,7 @@
 
 <p><a href="https://min.sc">Minsc is a high-level scripting language</a></p>
 
-<p>:::</p>
+<p>Notes :</p>
 <h4 id="multi-sig-2-of-3-policy-gets-compiled-to-miniscript">multi-sig 2 of 3 policy gets compiled to miniscript</h4>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># policy
 
@@ -177,42 +192,46 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 </code></pre></div></div>
 
-<hr />
-
 <h3 id="4a-verify-multi-sig-descriptor-environment-variables-are-active">4a: Verify Multi-Sig-Descriptor environment variables are active</h3>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">env | grep MULTI</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">env | grep MULTI</code></p>
 
 <p><img src="https://i.imgur.com/aAgtlsi.gif" alt="" /></p>
 
 <hr />
-
 <h2 id="step-5-generate-receive-address-by-using-multi-sig-descriptor-wallets">Step 5: Generate Receive Address by using Multi-Sig-Descriptor Wallets</h2>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address</code></p>
 
 <p><img src="https://i.imgur.com/w1fxPSn.gif" alt="" /></p>
 
-<p>:red_circle: Did you generate the same address for all three? Good! Else, something might be incorrect.</p>
+<blockquote>
+  <p>Did you generate the same address for all three? Good! Else, something might be incorrect.</p>
+</blockquote>
 
+<hr />
 <h2 id="step-6-send-testnet-bitcoin-to-the-newly-created-receive-address">Step 6: Send Testnet Bitcoin to the newly created receive-address</h2>
 
 <p><a href="https://testnet-faucet.mempool.co">Bitcoin Testnet Faucet link:1</a>
 <a href="https://bitcoinfaucet.uo1.net">Bitcoin Testnet Faucet link:2</a></p>
 
+<hr />
+
 <h2 id="step-7-sync-one-of-the-multi-sig-wallets">Step 7: Sync one of the Multi-Sig Wallets</h2>
 
-<p>:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 sync`</p>
+<p>$ ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 sync`</p>
 
 <p><img src="https://i.imgur.com/GuefgeI.gif" alt="" /></p>
 
+<hr />
+
 <h2 id="step-8-check-balance-multi-sig-wallets">Step 8: Check Balance Multi-Sig Wallets</h2>
 
-<p>:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 get_balance`</p>
+<p>$ ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 get_balance`</p>
 
 <p><img src="https://i.imgur.com/zNciCqF.gif" alt="" /></p>
 
@@ -220,9 +239,10 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
   <li>Every wallet has access to sync and view balance.</li>
 </ul>
 
+<hr />
 <h2 id="step-9-check-multi-sig-policies-on-descriptor-wallet">Step 9: Check Multi-Sig Policies on Descriptor Wallet</h2>
 
-<p>:arrow_forward:<code class="language-plaintext highlighter-rouge"> bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies</code></p>
+<p>$<code class="language-plaintext highlighter-rouge"> bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies</code></p>
 
 <p>:::info
 :+1: The output below confirms the command was successful.
@@ -300,11 +320,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 <h3 id="export-unsigned_psbt-to-environment-variable">Export UNSIGNED_PSBT to environment variable</h3>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')</code></p>
 
 <h3 id="verify-unsigned_psbt--environment-variable">Verify UNSIGNED_PSBT  environment variable</h3>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">env | grep UNSIGNED</code>
+<p>$ <code class="language-plaintext highlighter-rouge">env | grep UNSIGNED</code>
 <img src="https://i.imgur.com/djHaRDq.gif" alt="" /></p>
 
 <hr />
@@ -312,11 +332,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 <h3 id="1st-wallet-signs-the-transaction">1st Wallet Signs the transaction</h3>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r '.psbt')</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r '.psbt')</code></p>
 
-<p>:arrow_forward:<code class="language-plaintext highlighter-rouge">env | grep ONESIG</code></p>
+<p>$<code class="language-plaintext highlighter-rouge">env | grep ONESIG</code></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "is_finalized": false,
@@ -331,11 +351,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 <hr />
 <h3 id="2nd-wallet-signs-the-transaction">2nd Wallet Signs the transaction</h3>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT</code></p>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r '.psbt')</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r '.psbt')</code></p>
 
-<p>:arrow_forward:<code class="language-plaintext highlighter-rouge">env | grep SECONDSIG</code></p>
+<p>$<code class="language-plaintext highlighter-rouge">env | grep SECONDSIG</code></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "is_finalized": true,
@@ -350,7 +370,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 <hr />
 <h2 id="step-12-broadcast-transaction">Step 12: Broadcast Transaction</h2>
 
-<p>:arrow_forward: <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT</code></p>
+<p>$ <code class="language-plaintext highlighter-rouge">bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT</code></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "txid": "61da2451874a483aa8d1d0787c7680d157639f284840de8885098cac43f6cc2f"
@@ -382,8 +402,10 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 </div>
 <div class="navigation">
 	
-		<a class="prev" href="/bdk-cli-basics/">< Bitcoin Dev Kit bdk-cli-basics Single-Signature 00</a>
+		<a class="prev" href="/bdk-cli-basics/">< BDK-CLI BASICS: Single-Signature Testnet Transaction (Tutorial)</a>
 	 
+	<a class="next" href="/bdk-how-to-get-started">Start using and contributing to Bitcoin Dev Kit ></a>
+
 </div>
 
 	<section class="comment-area w-100">

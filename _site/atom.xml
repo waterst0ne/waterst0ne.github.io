@@ -4,7 +4,7 @@
  <title>waterStone blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-12-16T08:59:03+03:00</updated>
+ <updated>2022-12-16T23:31:54+03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>waterStone</name>
@@ -13,7 +13,120 @@
 
  
  <entry>
-   <title>BDK: bdk-cli-basics 2-of-3 Multi-Signature</title>
+   <title>Start using and contributing to Bitcoin Dev Kit</title>
+   <link href="http://localhost:4000/bdk-how-to-get-started"/>
+   <updated>2022-12-16T03:00:00+03:00</updated>
+   <id>http://localhost:4000/bitcoindevkit-</id>
+   <content type="html">&lt;p&gt;This post is a list of resources and examples to begin using the &lt;a href=&quot;https://bitcoindevkit.org/&quot;&gt;Bitcoin Dev Kit library&lt;/a&gt;. Perfect for beginner/intermediate developers who want to learn the basics through BDK examples. Whether you are looking to contribute, develop, or create your own bitcoin application, this post should cover most of the fundamental information needed to get you started. This is a work in progress but should suffice for anyone looking to start learning today.&lt;/p&gt;
+
+&lt;p&gt;What should you expect to get from this guide:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be exposed to BDK features and library.&lt;/li&gt;
+  &lt;li&gt;Hands-on tutorials in order to learn by doing.&lt;/li&gt;
+  &lt;li&gt;Resources at the end of the page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Goals:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Onboard new developers, contributors, and projects.&lt;/li&gt;
+  &lt;li&gt;You will be able to reproduce these to create your own custom Bitcoin wallet or app.&lt;/li&gt;
+  &lt;li&gt;Supported languages: Rust, Java/Kotlin, Swift, Python and React Native.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lets get started :&lt;/p&gt;
+
+&lt;h2 id=&quot;easy--intermediate-tutorials&quot;&gt;Easy / Intermediate Tutorials:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://waterst0ne.github.io/bdk-cli-basics/&quot;&gt;BDK-CLI Basics: Single-Sig Testnet transaction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://waterst0ne.github.io/bdk-cli-basics-multisig/&quot;&gt;BDK-CLI Basics: 2-of-3 Multi-Sig Testnet Transaction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoinbook/bitcoinbook/blob/develop/appdx-bitcoindevkit.asciidoc&quot;&gt;Mastering Bitcoin Book : Bitcoin Dev Kit and BDK-CLI( 3 Wallet Examples)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This tutorial comes with a video also.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoindevkit.org/tutorials/spending_policy_demo/&quot;&gt;BDK-CLI MiniScript Policy Decoded: : 3-of-3 multi-sig or 2-of-3 and relative-timelock&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=-Q8OD8NCEe4&amp;amp;t=2s&quot;&gt;Bitcoin Developers : Learning BDK from the Command line (Youtube Video)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;advanced-tutorials&quot;&gt;Advanced Tutorials:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoindevkit/bdk&quot;&gt;Github Rust Examples&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.rs/bdk/latest/bdk/&quot;&gt;Rust Documents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoindevkit.org/blog/2020/12/hello-world/&quot;&gt;BDK Hello World Tutorial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoindevkit.org/tutorials/hidden-power-of-bitcoin/&quot;&gt;Hidden Powers of Miniscript Poly &amp;amp; Descriptors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;other-bdk-git-libraries&quot;&gt;Other BDK GIT Libraries:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoindevkit/bdk-ffi&quot;&gt;BDK-FFI&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://hackmd.io/@thunderbiscuit/HJx0a5g1Sc/%2FbFseX47kRkq6OpAlajfPAw&quot;&gt;thunderbiscuit : BDK Language Bindings
+Notes for Devs &amp;amp; Maintainers &lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://github.com/mozilla/uniffi-rs&quot;&gt;UNIFFI&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoindevkit/bdk-cli&quot;&gt;BDK-CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-contribute&quot;&gt;How to Contribute:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoindevkit/bdk-cli/blob/master/CONTRIBUTING.md&quot;&gt;Contributing to BDK&lt;/a&gt;
+md)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jonatack/bitcoin-development/blob/master/how-to-review-bitcoin-core-prs.md&quot;&gt;Jon Atack: How to Review Bitcoin Core PRs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://danielabrozzoni.com/posts/contributing_to_oss/&quot;&gt;Daniela Brozzoni: Contributing to Bitcoin - tips and tricks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8&quot;&gt;Jimmy Song:A Gentle Introduction to Bitcoin Core Development&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bitcoin-resources&quot;&gt;Bitcoin Resources&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoinbook/bitcoinbook&quot;&gt;Mastering Bitcoin 2nd Edition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chaincode.gitbook.io/seminars/&quot;&gt;Chaincode Seminars for Bitcoin &amp;amp; Lightning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/chaincodelabs/bitcoin-curriculum&quot;&gt;Github Chaincode Curriculum&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/&quot;&gt;Summer of Bitcoin Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thunderbiscuit.com/&quot;&gt;Thunderbiscuits BLog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rosenbaum.se/btcphil/#readme&quot;&gt;Bitcoin Development Philosophy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.lopp.net/&quot;&gt;Lopp Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learnmeabitcoin.com/&quot;&gt;Learn Me a Bitcoin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://timechaindemo.io/&quot;&gt;TimechainDemo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;descriptors-and-mini-script&quot;&gt;Descriptors and Mini-Script&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoindevkit.org/descriptors/&quot;&gt;Descriptors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoin.sipa.be/miniscript/&quot;&gt;mini-script&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.bitcoin.it/wiki/Script&quot;&gt;Wiki-Script&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://min.sc/&quot;&gt;Minsc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitcoinops.org/en/topics/output-script-descriptors/&quot;&gt;Output Script Descriptors&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.summerofbitcoin.org/miniscript-policy-descriptors-hidden-powers-of-bitcoin/&quot;&gt;Miniscript Policy &amp;amp; Descriptors - Hidden Powers of Bitcoin&lt;/a&gt;
+&lt;a href=&quot;https://btctranscripts.com/stanford-blockchain-conference/2019/miniscript/&quot;&gt;Pieter Wullie: Miniscript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;extra-resources&quot;&gt;Extra-Resources&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bip32.net/&quot;&gt;BIP-32NET&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki&quot;&gt;BIP-32&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki&quot;&gt;BIP-39&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki&quot;&gt;BIP-44&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki&quot;&gt;BIP-84&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;more-open-source-bitcoin-projects&quot;&gt;More Open-Source Bitcoin Projects:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lightningdevkit.org/&quot;&gt;Lightning Dev Kit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial)</title>
    <link href="http://localhost:4000/bdk-cli-basics-multisig/"/>
    <updated>2022-12-15T03:00:00+03:00</updated>
    <id>http://localhost:4000/bdk-cli-basics -multiSig</id>
@@ -26,43 +139,57 @@
   &lt;li&gt;Intro to more complex but standard policies to create custom encumberances aka custom spending conditions for transactions.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+&lt;h3 id=&quot;rust-and-cargo-installation&quot;&gt;Rust and Cargo installation:```&lt;/h3&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl --proto &apos;=https&apos; --tlsv1.2 -sSf https://sh.rustup.rs | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;bdk-cli-installation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli&lt;/code&gt; installation:&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$  cargo install --features &quot;electrum,compiler&quot;  --version 0.6.0 bdk-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;step-1-generate-the-xprvs-extended-keys-and-save-to-environment-variables&quot;&gt;Step 1: Generate the XPRVs (Extended-Keys) and Save to environment variables&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Create three private keys and each in their own environment variable&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_00=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_00=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward:   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_01=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_01=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward:   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_02=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPRV_02=$(bdk-cli key generate | jq -r &apos;.xprv&apos;)&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/FwgUdwK.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;1a-verify-xprv-environment-variables-are-active&quot;&gt;1a: Verify XPRV environment variables are Active&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPRV&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPRV&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ZerGPbO.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
 &lt;h2 id=&quot;step-2-generate-xpubs-extended-public-keys--save-to-environment-variables&quot;&gt;Step 2: Generate XPUBs (Extended Public Keys) &amp;amp; Save to environment variables&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Generate the three individual Public Keys aka XPUBs using our Private key and descriptor path.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_00=$(bdk-cli key derive --xprv $XPRV_00 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_01=$(bdk-cli key derive --xprv $XPRV_01 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export XPUB_02=$(bdk-cli key derive --xprv $XPRV_02 --path &quot;m/84&apos;/1&apos;/0&apos;/0&quot; | jq -r &quot;.xpub&quot;)&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/xT3KRh4.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;2a-verify-xpub-environment-variables&quot;&gt;2a: Verify XPUB environment variables&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward:    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPUB&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep XPUB&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/SzAip9E.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -73,14 +200,15 @@
   &lt;p&gt;Create the wallet Descriptor for each wallet&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_00=&quot;$XPRV_00/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_00=&quot;$XPRV_00/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_01=&quot;$XPRV_01/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_01=&quot;$XPRV_01/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_02=&quot;$XPRV_02/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export DESCRIPTOR_02=&quot;$XPRV_02/84h/1h/0h/0/*&quot;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/mFrWt6b.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
 &lt;h2 id=&quot;step-4-create-multi-sig-descriptor-wallets&quot;&gt;Step 4: Create Multi-Sig-Descriptor Wallets&lt;/h2&gt;
 
 &lt;blockquote&gt;
@@ -91,22 +219,22 @@
   &lt;li&gt;When creating the descriptor the order matters so be aware of that when following tutorial if you are for any reason changing the order of the policy.
     &lt;h4 id=&quot;multi-sig-wallet-0&quot;&gt;Multi-Sig-Wallet 0&lt;/h4&gt;
   &lt;/li&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_00=$(bdk-cli compile &quot;thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_00=$(bdk-cli compile &quot;thresh(2,pk($DESCRIPTOR_00),pk($XPUB_01),pk($XPUB_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;multi-sig-wallet-1&quot;&gt;Multi-Sig-Wallet 1&lt;/h4&gt;
 &lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_01=$(bdk-cli compile &quot;thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_01=$(bdk-cli compile &quot;thresh(2,pk($XPUB_00),pk($DESCRIPTOR_01),pk($XPUB_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;multi-sig-wallet-2&quot;&gt;Multi-Sig-Wallet 2&lt;/h4&gt;
 &lt;ul class=&quot;task-list&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;:arrow_forward:  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_02=$(bdk-cli compile &quot;thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;$  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export MULTI_DESCRIPTOR_02=$(bdk-cli compile &quot;thresh(2,pk($XPUB_00),pk($XPUB_01),pk($DESCRIPTOR_02))&quot; | jq -r &apos;.descriptor&apos;)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Yb8RmFS.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;:::spoiler Click to show details : What is &lt;strong&gt;Miniscript?&lt;/strong&gt; + Resources&lt;/p&gt;
+&lt;p&gt;What is &lt;strong&gt;Miniscript?&lt;/strong&gt; + Resources&lt;/p&gt;
 
 &lt;p&gt;More details  &lt;strong&gt;Miniscript&lt;/strong&gt;, Policy:&lt;/p&gt;
 
@@ -114,7 +242,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://min.sc&quot;&gt;Minsc is a high-level scripting language&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;Notes :&lt;/p&gt;
 &lt;h4 id=&quot;multi-sig-2-of-3-policy-gets-compiled-to-miniscript&quot;&gt;multi-sig 2 of 3 policy gets compiled to miniscript&lt;/h4&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# policy
 
@@ -126,42 +254,46 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;hr /&gt;
-
 &lt;h3 id=&quot;4a-verify-multi-sig-descriptor-environment-variables-are-active&quot;&gt;4a: Verify Multi-Sig-Descriptor environment variables are active&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep MULTI&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep MULTI&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/aAgtlsi.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
-
 &lt;h2 id=&quot;step-5-generate-receive-address-by-using-multi-sig-descriptor-wallets&quot;&gt;Step 5: Generate Receive Address by using Multi-Sig-Descriptor Wallets&lt;/h2&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 get_new_address&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 get_new_address&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd02 --descriptor $MULTI_DESCRIPTOR_02 get_new_address&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/w1fxPSn.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;:red_circle: Did you generate the same address for all three? Good! Else, something might be incorrect.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Did you generate the same address for all three? Good! Else, something might be incorrect.&lt;/p&gt;
+&lt;/blockquote&gt;
 
+&lt;hr /&gt;
 &lt;h2 id=&quot;step-6-send-testnet-bitcoin-to-the-newly-created-receive-address&quot;&gt;Step 6: Send Testnet Bitcoin to the newly created receive-address&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://testnet-faucet.mempool.co&quot;&gt;Bitcoin Testnet Faucet link:1&lt;/a&gt;
 &lt;a href=&quot;https://bitcoinfaucet.uo1.net&quot;&gt;Bitcoin Testnet Faucet link:2&lt;/a&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;step-7-sync-one-of-the-multi-sig-wallets&quot;&gt;Step 7: Sync one of the Multi-Sig Wallets&lt;/h2&gt;
 
-&lt;p&gt;:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 sync`&lt;/p&gt;
+&lt;p&gt;$ ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 sync`&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/GuefgeI.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&quot;step-8-check-balance-multi-sig-wallets&quot;&gt;Step 8: Check Balance Multi-Sig Wallets&lt;/h2&gt;
 
-&lt;p&gt;:arrow_forward: ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 get_balance`&lt;/p&gt;
+&lt;p&gt;$ ` bdk-cli wallet –wallet wallet_name_msd00 –descriptor $MULTI_DESCRIPTOR_00 get_balance`&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/zNciCqF.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -169,9 +301,10 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
   &lt;li&gt;Every wallet has access to sync and view balance.&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
 &lt;h2 id=&quot;step-9-check-multi-sig-policies-on-descriptor-wallet&quot;&gt;Step 9: Check Multi-Sig Policies on Descriptor Wallet&lt;/h2&gt;
 
-&lt;p&gt;:arrow_forward:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 policies&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;:::info
 :+1: The output below confirms the command was successful.
@@ -249,11 +382,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 &lt;h3 id=&quot;export-unsigned_psbt-to-environment-variable&quot;&gt;Export UNSIGNED_PSBT to environment variable&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy &quot;{\&quot;CHANGE_ID_HERE\&quot;: [0,1]}&quot; | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy &quot;{\&quot;CHANGE_ID_HERE\&quot;: [0,1]}&quot; | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;verify-unsigned_psbt--environment-variable&quot;&gt;Verify UNSIGNED_PSBT  environment variable&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep UNSIGNED&lt;/code&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep UNSIGNED&lt;/code&gt;
 &lt;img src=&quot;https://i.imgur.com/djHaRDq.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -261,11 +394,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 
 &lt;h3 id=&quot;1st-wallet-signs-the-transaction&quot;&gt;1st Wallet Signs the transaction&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export ONESIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 sign --psbt $UNSIGNED_PSBT | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep ONESIG&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep ONESIG&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
   &quot;is_finalized&quot;: false,
@@ -280,11 +413,11 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 &lt;hr /&gt;
 &lt;h3 id=&quot;2nd-wallet-signs-the-transaction&quot;&gt;2nd Wallet Signs the transaction&lt;/h3&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;export SECONDSIG_PSBT=$(bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 sign --psbt $ONESIG_PSBT | jq -r &apos;.psbt&apos;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;:arrow_forward:&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep SECONDSIG&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;env | grep SECONDSIG&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
   &quot;is_finalized&quot;: true,
@@ -299,7 +432,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
 &lt;hr /&gt;
 &lt;h2 id=&quot;step-12-broadcast-transaction&quot;&gt;Step 12: Broadcast Transaction&lt;/h2&gt;
 
-&lt;p&gt;:arrow_forward: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;$ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli wallet --wallet wallet_name_msd01 --descriptor $MULTI_DESCRIPTOR_01 broadcast --psbt $SECONDSIG_PSBT&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
   &quot;txid&quot;: &quot;61da2451874a483aa8d1d0787c7680d157639f284840de8885098cac43f6cc2f&quot;
@@ -320,7 +453,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
  </entry>
  
  <entry>
-   <title>Bitcoin Dev Kit bdk-cli-basics Single-Signature 00</title>
+   <title>BDK-CLI BASICS: Single-Signature Testnet Transaction (Tutorial)</title>
    <link href="http://localhost:4000/bdk-cli-basics/"/>
    <updated>2022-12-14T03:00:00+03:00</updated>
    <id>http://localhost:4000/bdk-cli-basics</id>
@@ -386,7 +519,7 @@ This command clears the cache files located in the bdk-cli folder. &lt;code clas
 &lt;hr /&gt;
 &lt;h3 id=&quot;bdk-cli-installation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli&lt;/code&gt; installation:&lt;/h3&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$  cargo install --features electrum  --version 0.6.0 bdk-cli
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$  cargo install --features &quot;electrum,compiler&quot;  --version 0.6.0 bdk-cli
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;step-0-check-version-of-bdk-cli&quot;&gt;Step 0: Check Version of bdk-cli&lt;/h2&gt;

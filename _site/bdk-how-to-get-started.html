@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Start using and contributing to Bitcoin Dev Kit - waterStone blog</title>
+		<meta name="description" content="waterStone blog">
+		<meta name="keywords" content="bdkbdk-cliresources">
+		<base href="http://localhost:4000" />
+		
+    	<meta content="2022-12-16T03:00:00+03:00" property="article:published_time">
+    	<meta content="http://localhost:4000/about/" property="article:author">
+  		
+		<meta property="og:site_name" content="waterStone blog">
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://localhost:4000/bdk-how-to-get-started"/>
+		<meta property="og:title" content="Start using and contributing to Bitcoin Dev Kit - waterStone blog" />
+		<meta property="og:description" content="waterStone blog" />
+		<meta property="og:image" content="http://localhost:4000/assets/images/favicon.png"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta property="twitter:title" content="Start using and contributing to Bitcoin Dev Kit - waterStone blog" />
+		<meta property="twitter:description" content="waterStone blog" />
+		<meta property="twitter:image" content="http://localhost:4000/assets/images/favicon.png" />
+		<link rel="stylesheet" href="assets/css/highlight.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="alternate" type="application/atom+xml" title="waterStone blog" href="http://localhost:4000/atom.xml">
+		<link rel="alternate" type="application/json" title="waterStone blog" href="http://localhost:4000/feed.json" />
+		<link rel="sitemap" type="application/xml" title="sitemap" href="http://localhost:4000/sitemap.xml" />
+		<meta name="google-site-verification" content="XXX" />
+	</head>
+<body>
+<div class="container">
+	<div class="profile">
+		<a href="http://localhost:4000"><img src="assets/images/profile.jpg" class="profile-image"></a>
+		<div class="profile-about">
+			<h2 style="margin-bottom: 0; font-weight: 700;">waterStone</h2>
+			
+			
+				<a href="https://twitter.com/parallelogos" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+			
+			
+			
+			
+				<a href="https://github.com/waterst0ne" target="_blank"><img src="assets/images/icon/github.svg" class="social-icon"></a>
+			
+			
+			<a href="about"><img src="assets/images/icon/me.svg" class="social-icon"></a>
+			<br>
+			Computer Science @parallelogos <br> Bitcoin Contributor @BitcoinDevKit <br> Open Source /#linux
+			<br>
+			<div class="mode" id="mode-switcher" onclick="toggleNightMode();">
+				<span></span>
+			</div>
+		</div>
+	</div>
+	
+<div class="post-header">
+	<div class="post-date">16.12.2022</div>
+	<div class="post-share">
+		Share:&nbsp; 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/bitcoindevkit-" target="_blank"><img src="assets/images/icon/facebook.svg" class="social-icon"></a>
+		<a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer=http://localhost:4000/bitcoindevkit-&amp;text=Start using and contributing to Bitcoin Dev Kit - http://localhost:4000/bitcoindevkit-" target="_blank"><img src="assets/images/icon/twitter.svg" class="social-icon"></a>
+		<a href="https://api.whatsapp.com/send?text=http://localhost:4000/bitcoindevkit-" target="_blank"><img src="assets/images/icon/whatsapp.svg" class="social-icon"></a>
+	</div>
+</div>
+
+<div class="blog-post-content">
+	<h1>Start using and contributing to Bitcoin Dev Kit</h1>
+	<p>This post is a list of resources and examples to begin using the <a href="https://bitcoindevkit.org/">Bitcoin Dev Kit library</a>. Perfect for beginner/intermediate developers who want to learn the basics through BDK examples. Whether you are looking to contribute, develop, or create your own bitcoin application, this post should cover most of the fundamental information needed to get you started. This is a work in progress but should suffice for anyone looking to start learning today.</p>
+
+<p>What should you expect to get from this guide:</p>
+<ul>
+  <li>Be exposed to BDK features and library.</li>
+  <li>Hands-on tutorials in order to learn by doing.</li>
+  <li>Resources at the end of the page</li>
+</ul>
+
+<p>Goals:</p>
+<ul>
+  <li>Onboard new developers, contributors, and projects.</li>
+  <li>You will be able to reproduce these to create your own custom Bitcoin wallet or app.</li>
+  <li>Supported languages: Rust, Java/Kotlin, Swift, Python and React Native.</li>
+</ul>
+
+<p>Lets get started :</p>
+
+<h2 id="easy--intermediate-tutorials">Easy / Intermediate Tutorials:</h2>
+
+<ul>
+  <li><a href="https://waterst0ne.github.io/bdk-cli-basics/">BDK-CLI Basics: Single-Sig Testnet transaction</a></li>
+  <li><a href="https://waterst0ne.github.io/bdk-cli-basics-multisig/">BDK-CLI Basics: 2-of-3 Multi-Sig Testnet Transaction</a></li>
+  <li><a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/appdx-bitcoindevkit.asciidoc">Mastering Bitcoin Book : Bitcoin Dev Kit and BDK-CLI( 3 Wallet Examples)</a></li>
+</ul>
+
+<p>This tutorial comes with a video also.</p>
+<ul>
+  <li><a href="https://bitcoindevkit.org/tutorials/spending_policy_demo/">BDK-CLI MiniScript Policy Decoded: : 3-of-3 multi-sig or 2-of-3 and relative-timelock</a>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=-Q8OD8NCEe4&amp;t=2s">Bitcoin Developers : Learning BDK from the Command line (Youtube Video)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="advanced-tutorials">Advanced Tutorials:</h2>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk">Github Rust Examples</a></li>
+  <li><a href="https://docs.rs/bdk/latest/bdk/">Rust Documents</a></li>
+  <li><a href="https://bitcoindevkit.org/blog/2020/12/hello-world/">BDK Hello World Tutorial</a></li>
+  <li><a href="https://bitcoindevkit.org/tutorials/hidden-power-of-bitcoin/">Hidden Powers of Miniscript Poly &amp; Descriptors</a></li>
+</ul>
+
+<h3 id="other-bdk-git-libraries">Other BDK GIT Libraries:</h3>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk-ffi">BDK-FFI</a>
+    <ul>
+      <li><a href="https://hackmd.io/@thunderbiscuit/HJx0a5g1Sc/%2FbFseX47kRkq6OpAlajfPAw">thunderbiscuit : BDK Language Bindings
+Notes for Devs &amp; Maintainers </a>
+        <ul>
+          <li><a href="https://github.com/mozilla/uniffi-rs">UNIFFI</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/bitcoindevkit/bdk-cli">BDK-CLI</a></li>
+</ul>
+
+<h3 id="how-to-contribute">How to Contribute:</h3>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk-cli/blob/master/CONTRIBUTING.md">Contributing to BDK</a>
+md)</li>
+  <li><a href="https://github.com/jonatack/bitcoin-development/blob/master/how-to-review-bitcoin-core-prs.md">Jon Atack: How to Review Bitcoin Core PRs</a></li>
+  <li><a href="https://danielabrozzoni.com/posts/contributing_to_oss/">Daniela Brozzoni: Contributing to Bitcoin - tips and tricks</a></li>
+  <li><a href="https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8">Jimmy Song:A Gentle Introduction to Bitcoin Core Development</a></li>
+</ul>
+
+<h3 id="bitcoin-resources">Bitcoin Resources</h3>
+<ul>
+  <li><a href="https://github.com/bitcoinbook/bitcoinbook">Mastering Bitcoin 2nd Edition</a></li>
+  <li><a href="https://chaincode.gitbook.io/seminars/">Chaincode Seminars for Bitcoin &amp; Lightning</a></li>
+  <li><a href="https://github.com/chaincodelabs/bitcoin-curriculum">Github Chaincode Curriculum</a></li>
+  <li><a href="https://blog.summerofbitcoin.org/">Summer of Bitcoin Blog</a></li>
+  <li><a href="https://thunderbiscuit.com/">Thunderbiscuits BLog</a></li>
+  <li><a href="https://rosenbaum.se/btcphil/#readme">Bitcoin Development Philosophy</a></li>
+  <li><a href="https://blog.lopp.net/">Lopp Blog</a></li>
+  <li><a href="https://learnmeabitcoin.com/">Learn Me a Bitcoin</a></li>
+  <li><a href="https://timechaindemo.io/">TimechainDemo</a></li>
+</ul>
+
+<h3 id="descriptors-and-mini-script">Descriptors and Mini-Script</h3>
+<ul>
+  <li><a href="https://bitcoindevkit.org/descriptors/">Descriptors</a></li>
+  <li><a href="https://bitcoin.sipa.be/miniscript/">mini-script</a></li>
+  <li><a href="https://en.bitcoin.it/wiki/Script">Wiki-Script</a></li>
+  <li><a href="https://min.sc/">Minsc</a></li>
+  <li><a href="https://bitcoinops.org/en/topics/output-script-descriptors/">Output Script Descriptors</a></li>
+  <li><a href="https://blog.summerofbitcoin.org/miniscript-policy-descriptors-hidden-powers-of-bitcoin/">Miniscript Policy &amp; Descriptors - Hidden Powers of Bitcoin</a>
+<a href="https://btctranscripts.com/stanford-blockchain-conference/2019/miniscript/">Pieter Wullie: Miniscript</a></li>
+</ul>
+
+<h3 id="extra-resources">Extra-Resources</h3>
+
+<ul>
+  <li><a href="https://www.bip32.net/">BIP-32NET</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP-32</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP-44</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki">BIP-84</a></li>
+</ul>
+
+<h3 id="more-open-source-bitcoin-projects">More Open-Source Bitcoin Projects:</h3>
+<ul>
+  <li><a href="https://lightningdevkit.org/">Lightning Dev Kit</a></li>
+</ul>
+
+</div>
+<div class="tags-container">
+	
+		<a href="http://localhost:4000/tags/#bdk" class="post-tag">bdk</a>, 
+	
+		<a href="http://localhost:4000/tags/#bdk-cli" class="post-tag">bdk-cli</a>, 
+	
+		<a href="http://localhost:4000/tags/#resources" class="post-tag">resources</a>
+	
+</div>
+<div class="navigation">
+	
+		<a class="prev" href="/bdk-cli-basics-multisig/">< BDK-CLI BASICS: 2-of-3 Multi-Signature Testnet Transaction (Tutorial)</a>
+	 
+</div>
+
+	<section class="comment-area w-100">
+		<div class="comment-wrapper">
+			<div id="disqus_thread" class="article-comments"></div>
+			<script>
+			(function() {
+			var d = document, s = d.createElement('script');
+			s.src = '//XXX.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		</div>
+	</section>
+
+	<div class="footer">
+		<span>  Bitcoin is a Truth Function <b>OPEN SOURCE</b><b> John 1:1 </b></a></span>
+	</div>
+</div>
+	<script src="assets/js/ephesus.js"></script>
+	<script type="text/javascript">
+		if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+			document.getElementById('mode-switcher').classList.add('active');
+		}
+	</script>
+
+	
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-00"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-XXXXXXXX-00');
+    </script>
+	
+</body>
+</html>

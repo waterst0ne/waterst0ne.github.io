@@ -1,0 +1,106 @@
+I"º<p>This post is a list of resources and examples to begin using the <a href="https://bitcoindevkit.org/">Bitcoin Dev Kit library</a>. Perfect for beginner/intermediate developers who want to learn the basics through BDK examples. Whether you are looking to contribute, develop, or create your own bitcoin application, this post should cover most of the fundamental information needed to get you started. This is a work in progress but should suffice for anyone looking to start learning today.</p>
+
+<p>What should you expect to get from this guide:</p>
+<ul>
+  <li>Be exposed to BDK features and library.</li>
+  <li>Hands-on tutorials in order to learn by doing.</li>
+  <li>Resources at the end of the page</li>
+</ul>
+
+<p>Goals:</p>
+<ul>
+  <li>Onboard new developers, contributors, and projects.</li>
+  <li>You will be able to reproduce these to create your own custom Bitcoin wallet or app.</li>
+  <li>Supported languages: Rust, Java/Kotlin, Swift, Python and React Native.</li>
+</ul>
+
+<p>Lets get started :</p>
+
+<h2 id="easy--intermediate-tutorials">Easy / Intermediate Tutorials:</h2>
+
+<ul>
+  <li><a href="https://waterst0ne.github.io/bdk-cli-basics/">BDK-CLI Basics: Single-Sig Testnet transaction</a></li>
+  <li><a href="https://waterst0ne.github.io/bdk-cli-basics-multisig/">BDK-CLI Basics: 2-of-3 Multi-Sig Testnet Transaction</a></li>
+  <li><a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/appdx-bitcoindevkit.asciidoc">Mastering Bitcoin Book : Bitcoin Dev Kit and BDK-CLI( 3 Wallet Examples)</a></li>
+</ul>
+
+<p>This tutorial comes with a video also.</p>
+<ul>
+  <li><a href="https://bitcoindevkit.org/tutorials/spending_policy_demo/">BDK-CLI MiniScript Policy Decoded: : 3-of-3 multi-sig or 2-of-3 and relative-timelock</a>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=-Q8OD8NCEe4&amp;t=2s">Bitcoin Developers : Learning BDK from the Command line (Youtube Video)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="advanced-tutorials">Advanced Tutorials:</h2>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk">Github Rust Examples</a></li>
+  <li><a href="https://docs.rs/bdk/latest/bdk/">Rust Documents</a></li>
+  <li><a href="https://bitcoindevkit.org/blog/2020/12/hello-world/">BDK Hello World Tutorial</a></li>
+  <li><a href="https://bitcoindevkit.org/tutorials/hidden-power-of-bitcoin/">Hidden Powers of Miniscript Poly &amp; Descriptors</a></li>
+</ul>
+
+<h3 id="other-bdk-git-libraries">Other BDK GIT Libraries:</h3>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk-ffi">BDK-FFI</a>
+    <ul>
+      <li><a href="https://hackmd.io/@thunderbiscuit/HJx0a5g1Sc/%2FbFseX47kRkq6OpAlajfPAw">thunderbiscuit : BDK Language Bindings
+Notes for Devs &amp; Maintainers </a>
+        <ul>
+          <li><a href="https://github.com/mozilla/uniffi-rs">UNIFFI</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/bitcoindevkit/bdk-cli">BDK-CLI</a></li>
+</ul>
+
+<h3 id="how-to-contribute">How to Contribute:</h3>
+<ul>
+  <li><a href="https://github.com/bitcoindevkit/bdk-cli/blob/master/CONTRIBUTING.md">Contributing to BDK</a>
+md)</li>
+  <li><a href="https://github.com/jonatack/bitcoin-development/blob/master/how-to-review-bitcoin-core-prs.md">Jon Atack: How to Review Bitcoin Core PRs</a></li>
+  <li><a href="https://danielabrozzoni.com/posts/contributing_to_oss/">Daniela Brozzoni: Contributing to Bitcoin - tips and tricks</a></li>
+  <li><a href="https://bitcointechtalk.com/a-gentle-introduction-to-bitcoin-core-development-fdc95eaee6b8">Jimmy Song:A Gentle Introduction to Bitcoin Core Development</a></li>
+</ul>
+
+<h3 id="bitcoin-resources">Bitcoin Resources</h3>
+<ul>
+  <li><a href="https://github.com/bitcoinbook/bitcoinbook">Mastering Bitcoin 2nd Edition</a></li>
+  <li><a href="https://chaincode.gitbook.io/seminars/">Chaincode Seminars for Bitcoin &amp; Lightning</a></li>
+  <li><a href="https://github.com/chaincodelabs/bitcoin-curriculum">Github Chaincode Curriculum</a></li>
+  <li><a href="https://blog.summerofbitcoin.org/">Summer of Bitcoin Blog</a></li>
+  <li><a href="https://thunderbiscuit.com/">Thunderbiscuits BLog</a></li>
+  <li><a href="https://rosenbaum.se/btcphil/#readme">Bitcoin Development Philosophy</a></li>
+  <li><a href="https://blog.lopp.net/">Lopp Blog</a></li>
+  <li><a href="https://learnmeabitcoin.com/">Learn Me a Bitcoin</a></li>
+  <li><a href="https://timechaindemo.io/">TimechainDemo</a></li>
+</ul>
+
+<h3 id="descriptors-and-mini-script">Descriptors and Mini-Script</h3>
+<ul>
+  <li><a href="https://bitcoindevkit.org/descriptors/">Descriptors</a></li>
+  <li><a href="https://bitcoin.sipa.be/miniscript/">mini-script</a></li>
+  <li><a href="https://en.bitcoin.it/wiki/Script">Wiki-Script</a></li>
+  <li><a href="https://min.sc/">Minsc</a></li>
+  <li><a href="https://bitcoinops.org/en/topics/output-script-descriptors/">Output Script Descriptors</a></li>
+  <li><a href="https://blog.summerofbitcoin.org/miniscript-policy-descriptors-hidden-powers-of-bitcoin/">Miniscript Policy &amp; Descriptors - Hidden Powers of Bitcoin</a>
+<a href="https://btctranscripts.com/stanford-blockchain-conference/2019/miniscript/">Pieter Wullie: Miniscript</a></li>
+</ul>
+
+<h3 id="extra-resources">Extra-Resources</h3>
+
+<ul>
+  <li><a href="https://www.bip32.net/">BIP-32NET</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki">BIP-32</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki">BIP-39</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki">BIP-44</a></li>
+  <li><a href="https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki">BIP-84</a></li>
+</ul>
+
+<h3 id="more-open-source-bitcoin-projects">More Open-Source Bitcoin Projects:</h3>
+<ul>
+  <li><a href="https://lightningdevkit.org/">Lightning Dev Kit</a></li>
+</ul>
+:ET
