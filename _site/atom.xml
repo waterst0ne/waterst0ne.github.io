@@ -4,7 +4,7 @@
  <title>waterStone blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2022-12-17T19:25:54+03:00</updated>
+ <updated>2022-12-17T19:31:46+03:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>waterStone</name>
@@ -140,9 +140,36 @@ md)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
-&lt;h3 id=&quot;rust-and-cargo-installation&quot;&gt;Rust and Cargo installation:```&lt;/h3&gt;
+&lt;h2 id=&quot;installation-pre-requisites&quot;&gt;Installation Pre-requisites&lt;/h2&gt;
+&lt;h3 id=&quot;1-install-rust-and-cargo-&quot;&gt;1. Install Rust and Cargo :```&lt;/h3&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl --proto &apos;=https&apos; --tlsv1.2 -sSf https://sh.rustup.rs | sh
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-installl-sqlite3&quot;&gt;2. Installl &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sqlite3&lt;/code&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#sqlite is a database
+
+# Linux machine
+$ apt install sqlite-dev3
+
+# macOS machine
+$ brew sqlite
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-install-jq&quot;&gt;3. Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jq&lt;/code&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# jq is a tool used for data parsing
+
+# linux machine
+$ apt install jq
+
+# macOS machine
+$ brew install jq
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note: If you need remove the cache wallet data at any time use this is the command.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;hr /&gt;
 &lt;h3 id=&quot;bdk-cli-installation&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bdk-cli&lt;/code&gt; installation:&lt;/h3&gt;
