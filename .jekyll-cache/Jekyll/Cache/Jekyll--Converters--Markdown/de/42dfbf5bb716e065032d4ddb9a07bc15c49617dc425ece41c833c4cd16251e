@@ -1,4 +1,4 @@
-I"ýC<h2 id="bitcoin-dev-kit--2-of-3-multi-signature-descriptor-wallet-using-bdk-using-command-line">Bitcoin Dev Kit  2-of-3 Multi-Signature Descriptor Wallet using BDK using Command-Line</h2>
+I"D<h2 id="bitcoin-dev-kit--2-of-3-multi-signature-descriptor-wallet-using-bdk-using-command-line">Bitcoin Dev Kit  2-of-3 Multi-Signature Descriptor Wallet using BDK using Command-Line</h2>
 
 <h2 id="overview-of-the-tutorial">Overview of the tutorial</h2>
 <ul>
@@ -248,7 +248,7 @@ wsh(multi(2,XPRV_KEY,PUBKEY_B,XPUB_C))
   <li>Broadcast PSBT</li>
 </ul>
 
-<h3 id="export-unsigned_psbt-to-environment-variable">Export UNSIGNED_PSBT to environment variable</h3>
+<h3 id="create-txn-and-export-unsigned_psbt-to-environment-variable">Create TXN and Export UNSIGNED_PSBT to environment variable</h3>
 
 <p>$ <code class="language-plaintext highlighter-rouge">export UNSIGNED_PSBT=$(bdk-cli wallet --wallet wallet_name_msd00 --descriptor $MULTI_DESCRIPTOR_00 create_tx --send_all --to mkHS9ne12qx9pS9VojpwU5xtRd4T7X7ZUt:0 --external_policy "{\"CHANGE_ID_HERE\": [0,1]}" | jq -r '.psbt')</code></p>
 

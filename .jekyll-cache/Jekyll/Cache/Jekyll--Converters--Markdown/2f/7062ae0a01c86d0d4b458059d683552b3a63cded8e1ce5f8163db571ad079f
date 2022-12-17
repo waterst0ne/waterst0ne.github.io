@@ -1,4 +1,4 @@
-I"R<<h2 id="how-to-use-bdk-cli-basics">How to use bdk-cli basics</h2>
+I"®?<h2 id="how-to-use-bdk-cli-basics">How to use bdk-cli basics</h2>
 <h3 id="tutorial-goals">Tutorial Goals</h3>
 
 <ul>
@@ -53,9 +53,36 @@ This command clears the cache files located in the bdk-cli folder. <code class="
 </ul>
 
 <hr />
-<h3 id="rust-and-cargo-installation">Rust and Cargo installation:```</h3>
+<h2 id="installation-pre-requisites">Installation Pre-requisites</h2>
+<h3 id="1-install-rust-and-cargo-">1. Install Rust and Cargo :```</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 </code></pre></div></div>
+<h3 id="2-installl-sqlite3">2. Installl <code class="language-plaintext highlighter-rouge">sqlite3</code></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#sqlite is a database
+
+# Linux machine
+$ apt install sqlite-dev3
+
+# macOS machine
+$ brew sqlite
+</code></pre></div></div>
+
+<h3 id="3-install-jq">3. Install <code class="language-plaintext highlighter-rouge">jq</code></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># jq is a tool used for data parsing
+
+# linux machine
+$ apt install jq
+
+# macOS machine
+$ brew install jq
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>Note: If you need remove the cache wallet data at any time use this is the command.</p>
+</blockquote>
 
 <hr />
 <h3 id="bdk-cli-installation"><code class="language-plaintext highlighter-rouge">bdk-cli</code> installation:</h3>

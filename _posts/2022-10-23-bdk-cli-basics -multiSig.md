@@ -16,10 +16,37 @@ tags: [bdk, bdk-cli,tutorial,multi-sig]
 - Intro to more complex but standard policies to create custom encumberances aka custom spending conditions for transactions. 
 
 ---
-### Rust and Cargo installation:```
+## Installation Pre-requisites
+### 1. Install Rust and Cargo :```
 ```
 $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+### 2. Installl `sqlite3`
+
+```
+#sqlite is a database
+
+# Linux machine
+$ apt install sqlite-dev3
+
+# macOS machine
+$ brew sqlite
+```
+
+### 3. Install `jq`
+
+```
+# jq is a tool used for data parsing
+
+# linux machine
+$ apt install jq
+
+# macOS machine
+$ brew install jq
+
+```
+
+> Note: If you need remove the cache wallet data at any time use this is the command.
 
 ***
 ### `bdk-cli` installation:
