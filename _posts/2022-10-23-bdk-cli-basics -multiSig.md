@@ -27,7 +27,7 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 #sqlite is a database
 
 # Linux machine
-$ apt install sqlite-dev3
+$ apt install libsqlite3-dev
 
 # macOS machine
 $ brew sqlite
