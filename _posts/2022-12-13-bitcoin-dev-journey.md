@@ -24,7 +24,7 @@ My brother suggested I choose a single project instead of looking at three Bitco
 ---
 
 ### Bit Devs LA, My first Bitcoin meet up
-BitDevs LA was my first Bitcoin meetup, the guest speaker from Bitcoin Dev Kit gave updates on the project and also what their goals were this  year. One of their goals this year was to on-board new devs and projects.  The talk was followed by a Socratic seminar and shortly after we met up at local restaurant. I met Andrew from BitDevs LA who was nice enough to introduce me to Steve from BDK. Long story short, I asked Steve many questions on how I can start contributing. He recommended I continue reading documentation, follow the project on Github and start learning Rust, and when I was ready to contribute in any way that I could.  He also suggested that I apply to Summer of Bitcoin (Bitcoin Internship) next year since application deadline for this year was over. Please make sure to pay them a visit in sats if you happen to be in LA next time 😊. 
+BitDevs LA was my first Bitcoin meetup, the guest speaker from Bitcoin Dev Kit gave updates on the project and also what their goals were this  year. One of their goals this year was to on-board new devs and projects.  The talk was followed by a Socratic seminar and shortly after we met up at local restaurant. I met Andrew from BitDevs LA who was nice enough to introduce me to Steve from BDK. Long story short, I asked Steve many questions on how I can start contributing. He recommended I continue reading documentation, follow the project on Github and start learning Rust, and when I was ready to contribute in any way that I could.  He also suggested that I apply to Summer of Bitcoin (Bitcoin Internship) next year since application deadline for this year was over. Please make sure to pay them a visit if you happen to be in LA next time 😊. 
 
 
 When I got home, I did a quick web search on Summer of Bitcoin and noticed the applications were still open. Even if the deadline was past the due date, I decided to create a proposal and submitted the Summer of Bitcoin application even if the due date was  past due. I thought to myself, what’s the worst they could say? No, try again next year? I applied anyway, I continued to learn more about BDK and Rust. 
@@ -53,7 +53,7 @@ Tabconf is the best Bitcoin conference for developers, and aspiring contributors
 
 ### BitDevs Atlanta and Terminus Electric Money Lab
 Before TABCONF Autumn and I had the opportunity to go to Bitdevs Atlanta as guest speakers about our Summer of Bitcoin experience. Autumn is founder of Generation Bitcoin, a community of teens learning and contributing to Bitcoin.  BitDevs ATL is a Bitcoin meetup hosted by Stephen and Bryan who are also founders of Terminus Electric Money Laboratory which is a Bitcoin and Lightning hackerspace (workspace). 
-Please make sure to pay them a visit in your  sats-mobile if you happen to be in Atlanta. 
+Please make sure to pay them a visit if you happen to be in Atlanta. 
 -	[Generation Bitcoin](https://genbitcoin.org/) 
 -	[BitDevs ATL](https://atlantabitdevs.org/)
 -	[Terminus Electric Money Lab](https://terminus.money/)
